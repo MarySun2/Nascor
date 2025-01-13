@@ -1,0 +1,17 @@
+#cloud-config
+# Configuration to install nginx and create a custom page
+
+runcmd:
+  - sudo apt-get update -y               # Update packages
+  - sudo apt-get install nginx -y        # Install Nginx
+  - echo "<!DOCTYPE html>" > /var/www/html/index.html
+  - echo "<html>" >> /var/www/html/index.html
+  - echo "<head>" >> /var/www/html/index.html
+  - echo "    <title>Welcome to Azure</title>" >> /var/www/html/index.html
+  - echo "</head>" >> /var/www/html/index.html
+  - echo "<body>" >> /var/www/html/index.html
+  - echo "    <h1>Hello World from $(hostname)</h1>" >> /var/www/html/index.html
+  - echo "    <p>This page was automatically configured with cloud-init.</p>" >> /var/www/html/index.html
+  - echo "</body>" >> /var/www/html/index.html
+  - echo "</html>" >> /var/www/html/index.html
+  - sudo systemctl restart nginx         # Restart Nginx to apply changes
