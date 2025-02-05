@@ -1,44 +1,33 @@
-var builder = WebApplication.CreateBuilder(args);
+using System;
+using System.Threading.Tasks;
+using Microsoft.Identity.Client;
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+namespace AuthConsoleApp
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    class Program
+    {
+        private const string _clientId = "?";
+        private const string _tenantId = "?";
+        private const string _clientSecret = "?"; // Debes generarlo en Azure AD
 
-app.UseHttpsRedirection();
+        static async Task Main(string[] args)
+        {
+            var app = ConfidentialClientApplicationBuilder.Create(_clientId)
+                .WithClientSecret(_clientSecret)
+                .WithAuthority($"https://login.microsoftonline.com/{_tenantId}")
+                .Build();
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
+            string[] scopes = { "https://graph.microsoft.com/.default" };
 
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast")
-.WithOpenApi();
-
-app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+            try
+            {
+                var result = await app.AcquireTokenForClient(scopes).ExecuteAsync();
+                Console.WriteLine($"Token:\n{result.AccessToken}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error:\n{ex.Message}");
+            }
+        }
+    }
 }
