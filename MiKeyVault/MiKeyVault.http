@@ -1,0 +1,6 @@
+@MiKeyVault_HostAddress = http://localhost:5136
+
+GET {{MiKeyVault_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
