@@ -1,0 +1,44 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Gestión de Productos API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/productos": {
+      "get": {
+        "summary": "Obtener la lista de productos",
+        "responses": {
+          "200": {
+            "description": "Lista de productos",
+            "content": {
+              "application/json": {
+                "example": [
+                  {"id": 1, "nombre": "Laptop", "precio": 1000},
+                  {"id": 2, "nombre": "Mouse", "precio": 20}
+                ]
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Agregar un nuevo producto",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "example": {"nombre": "Teclado", "precio": 50}
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Producto agregado"
+          }
+        }
+      }
+    }
+  }
+}
+
+  
