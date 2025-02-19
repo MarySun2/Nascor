@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MiAppServiceBus")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ee625dbc39e36ef0891860a640bbf8069753c9f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ffd0b6a20366a69bff31cc5c3f93c2f2412f6dd8")]
 [assembly: System.Reflection.AssemblyProductAttribute("MiAppServiceBus")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MiAppServiceBus")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
