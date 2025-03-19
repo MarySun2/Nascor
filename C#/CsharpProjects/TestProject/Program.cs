@@ -231,110 +231,183 @@ Console.WriteLine($"{firstName} purchased {widgetsPurchased} widgets.");
 // initialize variables - graded assignments
 
 // initialize variables - graded assignments
-int examAssignments = 5;
+// int examAssignments = 5;
 
-int[] sophiaScores = new int[] { 90, 86, 87, 98, 100, 94, 90 };
-int[] andrewScores = new int[] { 92, 89, 81, 96, 90, 89 };
-int[] emmaScores = new int[] { 90, 85, 87, 98, 68, 89, 89, 89 };
-int[] loganScores = new int[] { 90, 95, 87, 88, 96, 96 };
+// int[] sophiaScores = new int[] { 90, 86, 87, 98, 100, 94, 90 };
+// int[] andrewScores = new int[] { 92, 89, 81, 96, 90, 89 };
+// int[] emmaScores = new int[] { 90, 85, 87, 98, 68, 89, 89, 89 };
+// int[] loganScores = new int[] { 90, 95, 87, 88, 96, 96 };
 
-// Student names
-string[] studentNames = new string[] { "Sophia", "Andrew", "Emma", "Logan" };
+// // Student names
+// string[] studentNames = new string[] { "Sophia", "Andrew", "Emma", "Logan" };
 
-int[] studentScores = new int[10];
+// int[] studentScores = new int[10];
 
-string currentStudentLetterGrade = "";
+// string currentStudentLetterGrade = "";
 
-// Write the Report Header to the console
-Console.WriteLine("Student\t\tGrade\n");
+// // Write the Report Header to the console
+// Console.WriteLine("Student\t\tGrade\n");
 
-foreach (string name in studentNames)
+// foreach (string name in studentNames)
+// {
+//     string currentStudent = name;
+
+//     if (currentStudent == "Sophia")
+//        studentScores = sophiaScores;
+
+//     else if (currentStudent == "Andrew")
+//         studentScores = andrewScores;
+
+//     else if (currentStudent == "Emma")
+//         studentScores = emmaScores;
+
+//     else if (currentStudent == "Logan")
+//         studentScores = loganScores;
+
+//     // initialize/reset the sum of scored assignments
+//     int sumAssignmentScores = 0;
+
+//     // initialize/reset the calculated average of exam + extra credit scores
+//     decimal currentStudentGrade = 0;
+
+//     // initialize/reset a counter for the number of assignment 
+//     int gradedAssignments = 0;
+
+//     // loop through the scores array and complete calculations for currentStudent
+//     foreach (int score in studentScores)
+//     {
+//         // increment the assignment counter
+//         gradedAssignments += 1;
+
+//         if (gradedAssignments <= examAssignments)
+//             // add the exam score to the sum
+//             sumAssignmentScores += score;
+
+//         else
+//             // add the extra credit points to the sum - bonus points equal to 10% of an exam score
+//             sumAssignmentScores += score / 10;
+//     }
+
+//     currentStudentGrade = (decimal)(sumAssignmentScores) / examAssignments;
+
+//     if (currentStudentGrade >= 97)
+//         currentStudentLetterGrade = "A+";
+
+//     else if (currentStudentGrade >= 93)
+//         currentStudentLetterGrade = "A";
+
+//     else if (currentStudentGrade >= 90)
+//         currentStudentLetterGrade = "A-";
+
+//     else if (currentStudentGrade >= 87)
+//         currentStudentLetterGrade = "B+";
+
+//     else if (currentStudentGrade >= 83)
+//         currentStudentLetterGrade = "B";
+
+//     else if (currentStudentGrade >= 80)
+//         currentStudentLetterGrade = "B-";
+
+//     else if (currentStudentGrade >= 77)
+//         currentStudentLetterGrade = "C+";
+
+//     else if (currentStudentGrade >= 73)
+//         currentStudentLetterGrade = "C";
+
+//     else if (currentStudentGrade >= 70)
+//         currentStudentLetterGrade = "C-";
+
+//     else if (currentStudentGrade >= 67)
+//         currentStudentLetterGrade = "D+";
+
+//     else if (currentStudentGrade >= 63)
+//         currentStudentLetterGrade = "D";
+
+//     else if (currentStudentGrade >= 60)
+//         currentStudentLetterGrade = "D-";
+
+//     else
+//         currentStudentLetterGrade = "F";
+
+//     //Console.WriteLine("Student\t\tGrade\tLetter Grade\n");
+//     Console.WriteLine($"{currentStudent}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}");
+// }
+
+// // required for running in VS Code (keeps the Output windows open to view results)
+// Console.WriteLine("\n\rPress the Enter key to continue");
+// Console.ReadLine();
+
+
+// Ejercicio 12
+// Console.WriteLine("OPERADOR DE IGUALDAD == ");
+// Console.WriteLine("a" == "a");
+// Console.WriteLine("a" == "A");
+// Console.WriteLine(1 == 2);
+
+// string myValue = "a";
+// Console.WriteLine(myValue == "a");
+
+// string value1 = " a";
+// string value2 = "A ";
+// Console.WriteLine(value1.Trim().ToLower() == value2.Trim().ToLower());
+
+// Console.WriteLine("OPERADOR DE IGUALDAD != ");
+
+//   Console.WriteLine("a" != "a"); // False
+//         Console.WriteLine("a" != "A"); // True (C# distingue mayúsculas de minúsculas)
+//         Console.WriteLine(1 != 2);     // True
+
+//         string myValue = "a";
+//         Console.WriteLine(myValue != "a");
+
+        // Ejemplo de operador condicional (?:)
+        //<evaluate this condition> ? <if condition is true, return this value> : <if condition is false, return this value>
+
+        // Otro ejemplo de operador Condicional
+        // int saleAmount = 1001;
+        // int discount = saleAmount > 1000 ? 100 : 50;
+        // Console.WriteLine($"Discount: {discount}");
+
+        // //Crear un condicional con cara y cruz con 50% probavilidad que salga el dado
+        // // primera forma de hacerlo
+        // Random coin = new Random();
+
+        // int flip = coin.Next(0, 2);
+        // Console.WriteLine((flip == 0) ? "heads" : "tails");
+
+        // // segunda forma de hacerlo
+        // Console.WriteLine(coin.Next(0, 2) == 0 ? "heads" : "tails");
+
+        // // Tercera forma de hacerlo
+        // Console.WriteLine(new Random().Next(2) == 0 ? "Cara" : "Cruz");
+
+        // Ejercicio 13
+string permission = "Admin|Manager";
+int level = 53;
+
+if (permission.Contains("Admin"))
 {
-    string currentStudent = name;
-
-    if (currentStudent == "Sophia")
-       studentScores = sophiaScores;
-
-    else if (currentStudent == "Andrew")
-        studentScores = andrewScores;
-
-    else if (currentStudent == "Emma")
-        studentScores = emmaScores;
-
-    else if (currentStudent == "Logan")
-        studentScores = loganScores;
-
-    // initialize/reset the sum of scored assignments
-    int sumAssignmentScores = 0;
-
-    // initialize/reset the calculated average of exam + extra credit scores
-    decimal currentStudentGrade = 0;
-
-    // initialize/reset a counter for the number of assignment 
-    int gradedAssignments = 0;
-
-    // loop through the scores array and complete calculations for currentStudent
-    foreach (int score in studentScores)
+    if (level > 55)
     {
-        // increment the assignment counter
-        gradedAssignments += 1;
-
-        if (gradedAssignments <= examAssignments)
-            // add the exam score to the sum
-            sumAssignmentScores += score;
-
-        else
-            // add the extra credit points to the sum - bonus points equal to 10% of an exam score
-            sumAssignmentScores += score / 10;
+        Console.WriteLine("Welcome, Super Admin user.");
     }
-
-    currentStudentGrade = (decimal)(sumAssignmentScores) / examAssignments;
-
-    if (currentStudentGrade >= 97)
-        currentStudentLetterGrade = "A+";
-
-    else if (currentStudentGrade >= 93)
-        currentStudentLetterGrade = "A";
-
-    else if (currentStudentGrade >= 90)
-        currentStudentLetterGrade = "A-";
-
-    else if (currentStudentGrade >= 87)
-        currentStudentLetterGrade = "B+";
-
-    else if (currentStudentGrade >= 83)
-        currentStudentLetterGrade = "B";
-
-    else if (currentStudentGrade >= 80)
-        currentStudentLetterGrade = "B-";
-
-    else if (currentStudentGrade >= 77)
-        currentStudentLetterGrade = "C+";
-
-    else if (currentStudentGrade >= 73)
-        currentStudentLetterGrade = "C";
-
-    else if (currentStudentGrade >= 70)
-        currentStudentLetterGrade = "C-";
-
-    else if (currentStudentGrade >= 67)
-        currentStudentLetterGrade = "D+";
-
-    else if (currentStudentGrade >= 63)
-        currentStudentLetterGrade = "D";
-
-    else if (currentStudentGrade >= 60)
-        currentStudentLetterGrade = "D-";
-
     else
-        currentStudentLetterGrade = "F";
-
-    //Console.WriteLine("Student\t\tGrade\tLetter Grade\n");
-    Console.WriteLine($"{currentStudent}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}");
+    {
+        Console.WriteLine("Welcome, Admin user.");
+    }
 }
-
-// required for running in VS Code (keeps the Output windows open to view results)
-Console.WriteLine("\n\rPress the Enter key to continue");
-Console.ReadLine();
-
-
+else if (permission.Contains("Manager"))
+{
+    if (level >= 20)
+    {
+        Console.WriteLine("Contact an Admin for access.");
+    }
+    else
+    {
+        Console.WriteLine("You do not have sufficient privileges.");
+    }
+}
+else
+{
+    Console.WriteLine("You do not have sufficient privileges.");
+}
