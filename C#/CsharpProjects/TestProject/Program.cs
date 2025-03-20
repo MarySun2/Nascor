@@ -382,32 +382,90 @@ Console.WriteLine($"{firstName} purchased {widgetsPurchased} widgets.");
         // Console.WriteLine(new Random().Next(2) == 0 ? "Cara" : "Cruz");
 
         // Ejercicio 13
-string permission = "Admin|Manager";
-int level = 53;
+// string permission = "Admin|Manager";
+// int level = 53;
 
-if (permission.Contains("Admin"))
+// if (permission.Contains("Admin"))
+// {
+//     if (level > 55)
+//     {
+//         Console.WriteLine("Welcome, Super Admin user.");
+//     }
+//     else
+//     {
+//         Console.WriteLine("Welcome, Admin user.");
+//     }
+// }
+// else if (permission.Contains("Manager"))
+// {
+//     if (level >= 20)
+//     {
+//         Console.WriteLine("Contact an Admin for access.");
+//     }
+//     else
+//     {
+//         Console.WriteLine("You do not have sufficient privileges.");
+//     }
+// }
+// else
+// {
+//     Console.WriteLine("You do not have sufficient privileges.");
+// }
+
+// Ejercicio 14
+
+// bool flag = false;
+// if (flag)
+// {
+//     int value = 10;
+//     Console.WriteLine($"Inside the code block: {value}");
+// }else {
+//     Console.WriteLine("No es valido");
+// }
+
+// Ejercicio 15
+// bool flag = true;
+// int value = 0;
+
+// if (flag)
+// {
+//     Console.WriteLine($"Inside the code block: {value}");
+// }
+
+// value = 10;
+// Console.WriteLine($"Outside the code block: {value}");
+
+// Ejercicio 16
+// string name = "steve";
+
+// if (name == "bob") 
+//     Console.WriteLine("Found Bob");
+
+// else if (name == "steve") 
+//         Console.WriteLine("Found Steve");
+
+// else 
+//     Console.WriteLine("Found Chuck");
+
+// Ejercicio 17
+int[] numbers = { 4, 8, 15, 16, 23, 42 };
+
+int total = 0; // Declarar fuera del bucle
+bool found = false; // Declarar fuera del bucle
+
+foreach (int number in numbers)
 {
-    if (level > 55)
+    total += number; // Acumular correctamente
+
+    if (number == 42)
     {
-        Console.WriteLine("Welcome, Super Admin user.");
-    }
-    else
-    {
-        Console.WriteLine("Welcome, Admin user.");
+       found = true; // Asignar correctamente
     }
 }
-else if (permission.Contains("Manager"))
+
+if (found) 
 {
-    if (level >= 20)
-    {
-        Console.WriteLine("Contact an Admin for access.");
-    }
-    else
-    {
-        Console.WriteLine("You do not have sufficient privileges.");
-    }
+    Console.WriteLine("Set contains 42");
 }
-else
-{
-    Console.WriteLine("You do not have sufficient privileges.");
-}
+
+Console.WriteLine($"Total: {total}");
