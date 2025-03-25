@@ -499,128 +499,369 @@ Console.WriteLine($"{firstName} purchased {widgetsPurchased} widgets.");
 
 // SKU = Stock Keeping Unit. 
 // SKU value format: <product #>-<2-letter color code>-<size code>
-string sku = "01-MN-L";
+// string sku = "01-MN-L";
 
-string[] product = sku.Split('-');
+// string[] product = sku.Split('-');
 
-string type = "";
-string color = "";
-string size = "";
+// string type = "";
+// string color = "";
+// string size = "";
 
-if (product[0] == "01")
-{
-    type = "Sweat shirt";
+// if (product[0] == "01")
+// {
+//     type = "Sweat shirt";
 
-} else if (product[0] == "02")
-{
+// } else if (product[0] == "02")
+// {
 
-    type = "T-Shirt";
+//     type = "T-Shirt";
 
-} else if (product[0] == "03")
-{
-    type = "Sweat pants";
-}
-else
-{
-    type = "Other";
-}
+// } else if (product[0] == "03")
+// {
+//     type = "Sweat pants";
+// }
+// else
+// {
+//     type = "Other";
+// }
 
-if (product[1] == "BL")
-{
-    color = "Black";
+// if (product[1] == "BL")
+// {
+//     color = "Black";
 
-} else if (product[1] == "MN")
-{
+// } else if (product[1] == "MN")
+// {
 
-    color = "Maroon";
+//     color = "Maroon";
 
-} else
-{
+// } else
+// {
 
-    color = "White";
+//     color = "White";
 
-}
+// }
 
-if (product[2] == "S")
-{
-    size = "Small";
+// if (product[2] == "S")
+// {
+//     size = "Small";
 
-} else if (product[2] == "M")
-{
+// } else if (product[2] == "M")
+// {
 
-    size = "Medium";
+//     size = "Medium";
 
-} else if (product[2] == "L")
-{
+// } else if (product[2] == "L")
+// {
 
-    size = "Large";
+//     size = "Large";
 
-} else
-{
+// } else
+// {
 
-    size = "One Size Fits All";
+//     size = "One Size Fits All";
 
-}
+// }
 
-Console.WriteLine($"Product: {size} {color} {type}");
+// Console.WriteLine($"Product: {size} {color} {type}");
 
 
-//Ejercicio 19 con switch
+// //Ejercicio 19 con switch
 
-// SKU = Stock Keeping Unit
-string sku = "01-MN-L";
+// // SKU = Stock Keeping Unit
+// string sku = "01-MN-L";
 
-string[] product = sku.Split('-');
+// string[] product = sku.Split('-');
 
-string type = "";
-string color = "";
-string size = "";
+// string type = "";
+// string color = "";
+// string size = "";
 
-switch (product[0])
-{
-    case "01":
-        type = "Sweat shirt";
-        break;
-    case "02":
-        type = "T-Shirt";
-        break;
-    case "03":
-        type = "Sweat pants";
-        break;
-    default:
-        type = "Other";
-        break;
-}
+// switch (product[0])
+// {
+//     case "01":
+//         type = "Sweat shirt";
+//         break;
+//     case "02":
+//         type = "T-Shirt";
+//         break;
+//     case "03":
+//         type = "Sweat pants";
+//         break;
+//     default:
+//         type = "Other";
+//         break;
+// }
 
-switch (product[1])
-{
-    case "BL":
-        color = "Black";
-        break;
-    case "MN":
-        color = "Maroon";
-        break;
-    default:
-        color = "White";
-        break;
-}
+// switch (product[1])
+// {
+//     case "BL":
+//         color = "Black";
+//         break;
+//     case "MN":
+//         color = "Maroon";
+//         break;
+//     default:
+//         color = "White";
+//         break;
+// }
 
-switch (product[2])
-{
-    case "S":
-        size = "Small";
-        break;
-    case "M":
-        size = "Medium";
-        break;
-    case "L":
-        size = "Large";
-        break;
-    default:
-        size = "One Size Fits All";
-        break;
-}
+// switch (product[2])
+// {
+//     case "S":
+//         size = "Small";
+//         break;
+//     case "M":
+//         size = "Medium";
+//         break;
+//     case "L":
+//         size = "Large";
+//         break;
+//     default:
+//         size = "One Size Fits All";
+//         break;
+// }
 
-Console.WriteLine($"Product: {size} {color} {type}");
+// Console.WriteLine($"Product: {size} {color} {type}");
 
-//
+// // Ejemplo de for
+
+// for (int i = 10; i >= 0; i--)
+// {
+//     Console.WriteLine(i);
+// }
+
+// // Ejemplo de for
+
+// for (int i = 0; i < 10; i++)
+// {
+//     Console.WriteLine(i);
+// }
+
+// //Ejemplo  de for
+// for (int i = 0; i < 10; i += 3)
+// {
+//     Console.WriteLine(i);
+// }
+
+// // ejemplo de for con break
+// for (int i = 0; i < 10; i++)
+// {
+//     Console.WriteLine(i);
+//     if (i == 7) break;
+// }
+
+// Ejemplo de for con matrices
+
+// string[] names = { "Alex", "Eddie", "David", "Michael" };
+
+// for (int i = names.Length - 1; i >= 0; i--)
+// {
+//     Console.WriteLine(names[i]);
+// }
+
+// //Otro Ejemplo de for con matrices
+
+// string[] names = { "Alex", "Eddie", "David", "Michael" };
+
+// for (int i = 0; i < names.Length; i++)
+// {
+//     if (names[i] == "David")
+//     {
+//         names[i] = "Sammy";
+//     }
+// }
+
+// foreach (var name in names)
+// {
+//     Console.WriteLine(name);
+// }
+
+//Ejemplo de FIZZBUZZ
+
+// using System;
+
+// class Program
+// {
+//     static void Main()
+//     {
+//         for (int i = 1; i <= 100; i++)  // Bucle del 1 al 100
+//         {
+//             if (i % 3 == 0 && i % 5 == 0) // Si es divisible por 3 y 5
+//             {
+//                 Console.WriteLine($"{i} - FizzBuzz");
+//             }
+//             else if (i % 3 == 0)  // Si es divisible por 3
+//             {
+//                 Console.WriteLine($"{i} - Fizz");
+//             }
+//             else if (i % 5 == 0)  // Si es divisible por 5
+//             {
+//                 Console.WriteLine($"{i} - Buzz");
+//             }
+//             else  // Si no es divisible por 3 ni por 5
+//             {
+//                 Console.WriteLine(i);
+//             }
+//         }
+//     }
+// }
+
+//Ejemplo While y Do while
+
+// Random random = new Random();
+// int current = 0;
+
+// do
+// {
+//     current = random.Next(1, 11);
+//     Console.WriteLine(current);
+// } while (current != 7);
+
+// while
+
+//  Random random = new Random(); // Generador de números aleatorios
+//  int current = random.Next(1, 11); // Generar el primer número aleatorio
+
+//         while (current != 7) // Mientras el número no sea 7, sigue ejecutando
+//         {
+//             Console.WriteLine(current); // Imprime el número
+//             current = random.Next(1, 11); // Genera un nuevo número aleatorio
+//         }
+
+        // Console.WriteLine(current); // Finalmente imprime el 7 y termina
+    
+
+    //Ejercicio siguiente
+    
+// Random random = new Random();
+// int current = random.Next(1, 11);
+
+// do
+// {
+//     current = random.Next(1, 11);
+
+//     if (current >= 8) continue;
+
+//     Console.WriteLine(current);
+// } while (current != 7);
+
+//Juego del Desafio
+
+// int hero = 10;
+// int monster = 10;
+
+// Random dice = new Random();
+
+// do
+// {
+//     int roll = dice.Next(1, 11);
+//     monster -= roll;
+//     Console.WriteLine($"Monster was damaged and lost {roll} health and now has {monster} health.");
+
+//     if (monster <= 0) continue;
+
+//     roll = dice.Next(1, 11);
+//     hero -= roll;
+//     Console.WriteLine($"Hero was damaged and lost {roll} health and now has {hero} health.");
+
+// } while (hero > 0 && monster > 0);
+
+// Console.WriteLine(hero > monster ? "Hero wins!" : "Monster wins!");
+
+// Ejercicio 
+
+// string? readResult;
+// bool validEntry = false;
+// Console.WriteLine("Enter a string containing at least three characters:");
+
+// do
+// {
+//     readResult = Console.ReadLine();
+    
+//     if (readResult != null)
+//     {
+//         if (readResult.Length >= 3)
+//         {
+//             validEntry = true;
+//             Console.WriteLine("es true"); // Corregido
+//         }
+//         else
+//         {
+//             Console.WriteLine("Your input is invalid, please try again.");
+//         }
+//     }
+// } while (validEntry == false);
+
+// Console.WriteLine("Sale del bucle");
+
+//TAREA  PRIMERA PARTE
+
+// using System;
+
+// class Program
+// {
+//     static void Main()
+//     {
+//         int userNumber;  // Variable para almacenar la entrada del usuario
+//         bool isValid = false;  // Bandera para controlar la validación
+
+//         Console.WriteLine("Enter an integer value between 5 and 10");
+
+//         do
+//         {
+//             string? input = Console.ReadLine();  // Leer entrada del usuario
+//             bool isNumber = int.TryParse(input, out userNumber);  // Validar si es un número
+
+//             if (!isNumber)
+//             {
+//                 Console.WriteLine("Sorry, you entered an invalid number, please try again");
+//             }
+//             else if (userNumber < 5 || userNumber > 10)
+//             {
+//                 Console.WriteLine($"You entered {userNumber}. Please enter a number between 5 and 10.");
+//             }
+//             else
+//             {
+//                 isValid = true;  // La entrada es válida, salir del bucle
+//             }
+
+//         } while (!isValid);  // Repetir mientras la entrada sea inválida
+
+//         Console.WriteLine($"Your input value ({userNumber}) has been accepted.");
+//     }
+// }
+
+//sEGUNDA PARTE 
+
+// using System;
+
+// class Program
+// {
+//     static void Main()
+//     {
+//         string? userRole;
+//         bool isValidRole = false;
+
+//         Console.WriteLine("Enter your role name (Administrator, Manager, or User)");
+
+//         do
+//         {
+//             userRole = Console.ReadLine()?.Trim().ToLower();  // Leer y limpiar entrada
+
+//             if (userRole == "administrator" || userRole == "manager" || userRole == "user")
+//             {
+//                 isValidRole = true;  // Entrada válida, salir del bucle
+//             }
+//             else
+//             {
+//                 Console.WriteLine($"The role name that you entered, \"{userRole}\" is not valid. Enter your role name (Administrator, Manager, or User)");
+//             }
+
+//         } while (!isValidRole);  // Repetir hasta obtener una entrada válida
+
+//         Console.WriteLine($"Your input value ({userRole}) has been accepted.");
+//     }
+// }
+
+// TERCERA PARTE
+
