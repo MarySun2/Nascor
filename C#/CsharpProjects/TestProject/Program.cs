@@ -865,3 +865,128 @@ Console.WriteLine($"{firstName} purchased {widgetsPurchased} widgets.");
 
 // TERCERA PARTE
 
+// Declarar el array de cadenas
+
+        // string[] myStrings = new string[2] 
+        // { 
+        //     "I like pizza. I like roast chicken. I like salad", 
+        //     "I like all three of the menu choices" 
+        // };
+
+        // // Bucle externo para recorrer cada cadena en el array
+        // foreach (string myString in myStrings)
+        // {
+        //     string tempString = myString;  // Copia de la cadena actual
+        //     int periodLocation;  // Almacena la ubicación del punto
+
+        //     // Bucle interno para extraer frases separadas por "."
+        //     do
+        //     {
+        //         periodLocation = tempString.IndexOf("."); // Buscar el primer punto
+
+        //         if (periodLocation != -1)
+        //         {
+        //             // Extraer la frase hasta el punto, eliminar espacios en blanco
+        //             string sentence = tempString.Substring(0, periodLocation).Trim();
+        //             Console.WriteLine(sentence); // Mostrar la frase
+
+        //             // Eliminar la parte procesada + el punto, para continuar con la siguiente frase
+        //             tempString = tempString.Remove(0, periodLocation + 1).TrimStart();
+        //         }
+        //         else
+        //         {
+        //             // Si no hay más puntos, imprimir el resto de la cadena
+        //             Console.WriteLine(tempString.Trim());
+        //         }
+
+        //     } while (periodLocation != -1); // Continuar mientras haya puntos en la cadena
+        // }
+
+        // Ejercicio Practico
+        // Matriz multidimensional para almacenar los datos de las mascotas
+        string[,] ourAnimals = new string[,]
+        {
+            {"1", "Gato", "2", "Negro y blanco", "Juguetón", "Michi"},
+            {"2", "Perro", "3", "Marrón", "Amigable", "Max"},
+            {"3", "Gato", "", "Gris", "", ""},
+            {"4", "Perro", "5", "Negro", "Leal", "Rex"}
+        };
+
+        while (true) // Bucle principal del menú
+        {
+            // Menú principal
+            Console.WriteLine("\n--- Contoso Pets ---");
+            Console.WriteLine("1. Mostrar todas las mascotas");
+            Console.WriteLine("2. Agregar nueva mascota");
+            Console.WriteLine("3. Salir");
+            Console.Write("Seleccione una opción: ");
+            
+            string option = Console.ReadLine();
+
+            // Manejo de opciones
+            if (option == "1") 
+            {
+                Console.WriteLine("\nLista de Mascotas:");
+                for (int i = 0; i < ourAnimals.GetLength(0); i++)
+                {
+                    Console.WriteLine($"ID: {ourAnimals[i, 0]}, Especie: {ourAnimals[i, 1]}, Edad: {ourAnimals[i, 2]} años, Color: {ourAnimals[i, 3]}, Personalidad: {ourAnimals[i, 4]}, Alias: {ourAnimals[i, 5]}");
+                }
+            }
+            else if (option == "2") 
+            {
+                Console.Write("Ingrese la especie (Gato o Perro): ");
+                string species = Console.ReadLine().Trim();
+
+                if (species.ToLower() != "gato" && species.ToLower() != "perro")
+                {
+                    Console.WriteLine("⚠ Especie no válida. Solo se aceptan 'Gato' o 'Perro'.");
+                    continue;
+                }
+
+                string newId = (ourAnimals.GetLength(0) + 1).ToString();
+                Console.Write("Ingrese la edad (si no se conoce, deje vacío): ");
+                string age = Console.ReadLine().Trim();
+
+                Console.Write("Ingrese el color o características físicas: ");
+                string physicalDesc = Console.ReadLine().Trim();
+
+                Console.Write("Ingrese la personalidad (si no se conoce, deje vacío): ");
+                string personality = Console.ReadLine().Trim();
+
+                Console.Write("Ingrese el alias (si no tiene, deje vacío): ");
+                string alias = Console.ReadLine().Trim();
+
+                // Crear nueva matriz para agregar el nuevo animal
+                string[,] updatedAnimals = new string[ourAnimals.GetLength(0) + 1, 6];
+
+                for (int i = 0; i < ourAnimals.GetLength(0); i++)
+                {
+                    for (int j = 0; j < ourAnimals.GetLength(1); j++)
+                    {
+                        updatedAnimals[i, j] = ourAnimals[i, j];
+                    }
+                }
+
+                // Agregar nuevo animal
+                updatedAnimals[ourAnimals.GetLength(0), 0] = newId;
+                updatedAnimals[ourAnimals.GetLength(0), 1] = species;
+                updatedAnimals[ourAnimals.GetLength(0), 2] = age;
+                updatedAnimals[ourAnimals.GetLength(0), 3] = physicalDesc;
+                updatedAnimals[ourAnimals.GetLength(0), 4] = personality;
+                updatedAnimals[ourAnimals.GetLength(0), 5] = alias;
+
+                ourAnimals = updatedAnimals; // Actualizar la matriz principal
+
+                Console.WriteLine("🐶🐱 ¡Mascota agregada con éxito!");
+            }
+            else if (option == "3")
+            {
+                Console.WriteLine("Saliendo del programa...");
+                break;
+            }
+            else
+            {
+                Console.WriteLine("⚠ Opción no válida. Intente de nuevo.");
+            }
+        }
+    
