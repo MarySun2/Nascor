@@ -904,89 +904,206 @@ Console.WriteLine($"{firstName} purchased {widgetsPurchased} widgets.");
 
         // Ejercicio Practico
         // Matriz multidimensional para almacenar los datos de las mascotas
-        string[,] ourAnimals = new string[,]
-        {
-            {"1", "Gato", "2", "Negro y blanco", "Juguetón", "Michi"},
-            {"2", "Perro", "3", "Marrón", "Amigable", "Max"},
-            {"3", "Gato", "", "Gris", "", ""},
-            {"4", "Perro", "5", "Negro", "Leal", "Rex"}
-        };
+        // string[,] ourAnimals = new string[,]
+        // {
+        //     {"1", "Gato", "2", "Negro y blanco", "Juguetón", "Michi"},
+        //     {"2", "Perro", "3", "Marrón", "Amigable", "Max"},
+        //     {"3", "Gato", "", "Gris", "", ""},
+        //     {"4", "Perro", "5", "Negro", "Leal", "Rex"}
+        // };
 
-        while (true) // Bucle principal del menú
-        {
-            // Menú principal
-            Console.WriteLine("\n--- Contoso Pets ---");
-            Console.WriteLine("1. Mostrar todas las mascotas");
-            Console.WriteLine("2. Agregar nueva mascota");
-            Console.WriteLine("3. Salir");
-            Console.Write("Seleccione una opción: ");
+        // while (true) // Bucle principal del menú
+        // {
+        //     // Menú principal
+        //     Console.WriteLine("\n--- Contoso Pets ---");
+        //     Console.WriteLine("1. Mostrar todas las mascotas");
+        //     Console.WriteLine("2. Agregar nueva mascota");
+        //     Console.WriteLine("3. Salir");
+        //     Console.Write("Seleccione una opción: ");
             
-            string option = Console.ReadLine();
+        //     string option = Console.ReadLine();
 
-            // Manejo de opciones
-            if (option == "1") 
-            {
-                Console.WriteLine("\nLista de Mascotas:");
-                for (int i = 0; i < ourAnimals.GetLength(0); i++)
-                {
-                    Console.WriteLine($"ID: {ourAnimals[i, 0]}, Especie: {ourAnimals[i, 1]}, Edad: {ourAnimals[i, 2]} años, Color: {ourAnimals[i, 3]}, Personalidad: {ourAnimals[i, 4]}, Alias: {ourAnimals[i, 5]}");
-                }
-            }
-            else if (option == "2") 
-            {
-                Console.Write("Ingrese la especie (Gato o Perro): ");
-                string species = Console.ReadLine().Trim();
+        //     // Manejo de opciones
+        //     if (option == "1") 
+        //     {
+        //         Console.WriteLine("\nLista de Mascotas:");
+        //         for (int i = 0; i < ourAnimals.GetLength(0); i++)
+        //         {
+        //             Console.WriteLine($"ID: {ourAnimals[i, 0]}, Especie: {ourAnimals[i, 1]}, Edad: {ourAnimals[i, 2]} años, Color: {ourAnimals[i, 3]}, Personalidad: {ourAnimals[i, 4]}, Alias: {ourAnimals[i, 5]}");
+        //         }
+        //     }
+        //     else if (option == "2") 
+        //     {
+        //         Console.Write("Ingrese la especie (Gato o Perro): ");
+        //         string species = Console.ReadLine().Trim();
 
-                if (species.ToLower() != "gato" && species.ToLower() != "perro")
-                {
-                    Console.WriteLine("⚠ Especie no válida. Solo se aceptan 'Gato' o 'Perro'.");
-                    continue;
-                }
+        //         if (species.ToLower() != "gato" && species.ToLower() != "perro")
+        //         {
+        //             Console.WriteLine("⚠ Especie no válida. Solo se aceptan 'Gato' o 'Perro'.");
+        //             continue;
+        //         }
 
-                string newId = (ourAnimals.GetLength(0) + 1).ToString();
-                Console.Write("Ingrese la edad (si no se conoce, deje vacío): ");
-                string age = Console.ReadLine().Trim();
+        //         string newId = (ourAnimals.GetLength(0) + 1).ToString();
+        //         Console.Write("Ingrese la edad (si no se conoce, deje vacío): ");
+        //         string age = Console.ReadLine().Trim();
 
-                Console.Write("Ingrese el color o características físicas: ");
-                string physicalDesc = Console.ReadLine().Trim();
+        //         Console.Write("Ingrese el color o características físicas: ");
+        //         string physicalDesc = Console.ReadLine().Trim();
 
-                Console.Write("Ingrese la personalidad (si no se conoce, deje vacío): ");
-                string personality = Console.ReadLine().Trim();
+        //         Console.Write("Ingrese la personalidad (si no se conoce, deje vacío): ");
+        //         string personality = Console.ReadLine().Trim();
 
-                Console.Write("Ingrese el alias (si no tiene, deje vacío): ");
-                string alias = Console.ReadLine().Trim();
+        //         Console.Write("Ingrese el alias (si no tiene, deje vacío): ");
+        //         string alias = Console.ReadLine().Trim();
 
-                // Crear nueva matriz para agregar el nuevo animal
-                string[,] updatedAnimals = new string[ourAnimals.GetLength(0) + 1, 6];
+        //         // Crear nueva matriz para agregar el nuevo animal
+        //         string[,] updatedAnimals = new string[ourAnimals.GetLength(0) + 1, 6];
 
-                for (int i = 0; i < ourAnimals.GetLength(0); i++)
-                {
-                    for (int j = 0; j < ourAnimals.GetLength(1); j++)
-                    {
-                        updatedAnimals[i, j] = ourAnimals[i, j];
-                    }
-                }
+        //         for (int i = 0; i < ourAnimals.GetLength(0); i++)
+        //         {
+        //             for (int j = 0; j < ourAnimals.GetLength(1); j++)
+        //             {
+        //                 updatedAnimals[i, j] = ourAnimals[i, j];
+        //             }
+        //         }
 
-                // Agregar nuevo animal
-                updatedAnimals[ourAnimals.GetLength(0), 0] = newId;
-                updatedAnimals[ourAnimals.GetLength(0), 1] = species;
-                updatedAnimals[ourAnimals.GetLength(0), 2] = age;
-                updatedAnimals[ourAnimals.GetLength(0), 3] = physicalDesc;
-                updatedAnimals[ourAnimals.GetLength(0), 4] = personality;
-                updatedAnimals[ourAnimals.GetLength(0), 5] = alias;
+        //         // Agregar nuevo animal
+        //         updatedAnimals[ourAnimals.GetLength(0), 0] = newId;
+        //         updatedAnimals[ourAnimals.GetLength(0), 1] = species;
+        //         updatedAnimals[ourAnimals.GetLength(0), 2] = age;
+        //         updatedAnimals[ourAnimals.GetLength(0), 3] = physicalDesc;
+        //         updatedAnimals[ourAnimals.GetLength(0), 4] = personality;
+        //         updatedAnimals[ourAnimals.GetLength(0), 5] = alias;
 
-                ourAnimals = updatedAnimals; // Actualizar la matriz principal
+        //         ourAnimals = updatedAnimals; // Actualizar la matriz principal
 
-                Console.WriteLine("🐶🐱 ¡Mascota agregada con éxito!");
-            }
-            else if (option == "3")
-            {
-                Console.WriteLine("Saliendo del programa...");
-                break;
-            }
-            else
-            {
-                Console.WriteLine("⚠ Opción no válida. Intente de nuevo.");
-            }
-        }
+        //         Console.WriteLine("🐶🐱 ¡Mascota agregada con éxito!");
+        //     }
+        //     else if (option == "3")
+        //     {
+        //         Console.WriteLine("Saliendo del programa...");
+        //         break;
+        //     }
+        //     else
+        //     {
+        //         Console.WriteLine("⚠ Opción no válida. Intente de nuevo.");
+        //     }
+        // }
+    
+    //Ejemplo Mascotas
+
+    //  string[,] ourAnimals = {
+    //         { "c1", "Cat", "2", "Small black cat", "Playful and energetic", "" },
+    //         { "c2", "Cat", "3", "Large white cat", "Calm and affectionate", "Whiskers" },
+    //         { "d1", "Dog", "5", "Brown Labrador", "Loyal and protective", "" },
+    //         { "c4", "Cat", "", "", "", "" } // Datos incompletos
+    //     };
+
+    //     while (true)
+    //     {
+    //         // En caso que sea Exit
+    //         Console.WriteLine("Enter 4 to complete nickname and personality description, or type 'exit' to quit:");
+    //         string userInput = Console.ReadLine();
+    //         if (userInput.ToLower() == "exit")
+    //             break;
+            
+    //         //En caso que sea 4
+    //         if (userInput == "4")
+    //         {
+    //             for (int i = 0; i < ourAnimals.GetLength(0); i++)
+    //             {
+    //                 if (string.IsNullOrWhiteSpace(ourAnimals[i, 5])) // Nickname vacío
+    //                 {
+    //                     Console.Write($"Enter a nickname for ID #: {ourAnimals[i, 0]}: ");
+    //                     string nickname;
+    //                     do
+    //                     {
+    //                         nickname = Console.ReadLine();
+    //                         if (string.IsNullOrWhiteSpace(nickname))
+    //                             Console.Write("Nickname cannot be empty. Enter a valid nickname: ");
+    //                     } while (string.IsNullOrWhiteSpace(nickname));
+    //                     ourAnimals[i, 5] = nickname;
+    //                 }
+
+    //                 if (string.IsNullOrWhiteSpace(ourAnimals[i, 4])) // Descripción de personalidad vacía
+    //                 {
+    //                     Console.Write($"Enter a personality description for ID #: {ourAnimals[i, 0]} (likes or dislikes, tricks, energy level): ");
+    //                     string personality;
+    //                     do
+    //                     {
+    //                         personality = Console.ReadLine();
+    //                         if (string.IsNullOrWhiteSpace(personality))
+    //                             Console.Write("Personality description cannot be empty. Enter a valid description: ");
+    //                     } while (string.IsNullOrWhiteSpace(personality));
+    //                     ourAnimals[i, 4] = personality;
+    //                 }
+    //             }
+    //             Console.WriteLine("Nickname and personality description fields are complete for all of our friends.\nPress the Enter key to continue.");
+    //             Console.ReadLine();
+    //         }
+    //     }
+
+
+    //Ejercicio con matrices  
+
+    // string[] values = { "12.3", "45", "ABC", "11", "DEF" };
+        
+    //     string message = "";  // Variable para almacenar las letras.
+    //     double total = 0;     // Variable para almacenar la suma de los números.
+
+    //     foreach (string value in values)
+    //     {
+    //         if (value.All(char.IsLetter))  // Si es alfabético, concatenar.
+    //         {
+    //             message += value;
+    //         }
+    //         else  // Si no es alfabético, intentar convertirlo a número.
+    //         {
+    //             if (double.TryParse(value, out double num)) 
+    //             {
+    //                 total += num;  // Si es numérico, sumarlo al total.
+    //             }
+    //         }
+    //     }
+
+        // Mostrar el resultado.
+        // Console.WriteLine($"Message: {message}");
+        // Console.WriteLine($"Total: {total}");
+    
+
+    // Una forma mas sencilla de realizar el ejercicio
+//     string[] values = { "12.3", "45", "ABC", "11", "DEF" };
+
+// decimal total = 0m;
+// string message = "";
+
+// foreach (var value in values)
+// {
+//     decimal number; // stores the TryParse "out" value
+//     if (decimal.TryParse(value, out number))
+//     {
+//         total += number;
+//     } else
+//     {
+//         message += value;
+//     }
+// }
+
+// Console.WriteLine($"Message: {message}");
+// Console.WriteLine($"Total: {total}");
+
+// Ejercicio x por realizar
+
+        int value1 = 11;
+        decimal value2 = 6.2m;
+        float value3 = 4.3f;
+
+        //int result1 = (int)Math.Round(value1 / value2);
+        int result1 = Convert.ToInt32(value1/value2);
+        decimal result2 = value2 / (decimal)value3;
+        float result3 = value3 / value1;
+
+        Console.WriteLine($"Divide value1 by value2, display the result as an int: {result1}");
+        Console.WriteLine($"Divide value2 by value3, display the result as a decimal: {result2}");
+        Console.WriteLine($"Divide value3 by value1, display the result as a float: {result3}");
     
