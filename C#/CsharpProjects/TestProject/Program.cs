@@ -1529,7 +1529,7 @@ Console.WriteLine($"{firstName} purchased {widgetsPurchased} widgets.");
 //     // Note the overload of the Substring to return only the remaining 
 //     // unprocessed message:
 //     message = message.Substring(closingPosition + 1);
-}
+//}
 
 //IndexOfAny()
 
@@ -1612,57 +1612,498 @@ Console.WriteLine($"{firstName} purchased {widgetsPurchased} widgets.");
 
 //Reto microsoft
 
-const string input = "<div><h2>Widgets &trade;</h2><span>5000</span></div>";
+// const string input = "<div><h2>Widgets &trade;</h2><span>5000</span></div>";
 
-// 1. Extraer la cantidad de la etiqueta <span>...</span>
-int startSpan = input.IndexOf("<span>") + "<span>".Length; // Encontrar el inicio de <span>
-int endSpan = input.IndexOf("</span>"); // Encontrar el final de </span>
-string quantity = input.Substring(startSpan, endSpan - startSpan); // Extraer el contenido entre las etiquetas <span> y </span>
+// // 1. Extraer la cantidad de la etiqueta <span>...</span>
+// int startSpan = input.IndexOf("<span>") + "<span>".Length; // Encontrar el inicio de <span>
+// int endSpan = input.IndexOf("</span>"); // Encontrar el final de </span>
+// string quantity = input.Substring(startSpan, endSpan - startSpan); // Extraer el contenido entre las etiquetas <span> y </span>
 
-// 2. Eliminar las etiquetas <div> y </div>
-string output = input.Replace("<div>", "").Replace("</div>", ""); // Eliminar las etiquetas <div> y </div>
+// // 2. Eliminar las etiquetas <div> y </div>
+// string output = input.Replace("<div>", "").Replace("</div>", ""); // Eliminar las etiquetas <div> y </div>
 
-// 3. Reemplazar &trade; con &reg;
-output = output.Replace("&trade;", "&reg;"); // Reemplazar el símbolo ™ por ®
+// // 3. Reemplazar &trade; con &reg;
+// output = output.Replace("&trade;", "&reg;"); // Reemplazar el símbolo ™ por ®
 
-// 4. Mostrar los resultados
-Console.WriteLine($"Quantity: {quantity}");
-Console.WriteLine($"Output: {output}");
+// // 4. Mostrar los resultados
+// Console.WriteLine($"Quantity: {quantity}");
+// Console.WriteLine($"Output: {output}");
 
 
-// otra forma de hacerlo
+// // otra forma de hacerlo
 
-const string input = "<div><h2>Widgets &trade;</h2><span>5000</span></div>";
+// const string input = "<div><h2>Widgets &trade;</h2><span>5000</span></div>";
 
-string quantity = "";
-string output = "";
+// string quantity = "";
+// string output = "";
 
-// Your work here
+// // Your work here
 
-// Extract the "quantity"
-const string openSpan = "<span>";
-const string closeSpan = "</span>";
+// // Extract the "quantity"
+// const string openSpan = "<span>";
+// const string closeSpan = "</span>";
 
-int quantityStart = input.IndexOf(openSpan) + openSpan.Length; // + length of <span> so index at end of <span> tag
-int quantityEnd= input.IndexOf(closeSpan);
-int quantityLength = quantityEnd - quantityStart;
-quantity = input.Substring(quantityStart, quantityLength);
-quantity = $"Quantity: {quantity}";
+// int quantityStart = input.IndexOf(openSpan) + openSpan.Length; // + length of <span> so index at end of <span> tag
+// int quantityEnd= input.IndexOf(closeSpan);
+// int quantityLength = quantityEnd - quantityStart;
+// quantity = input.Substring(quantityStart, quantityLength);
+// quantity = $"Quantity: {quantity}";
 
-// Set output to input, replacing the trademark symbol with the registered trademark symbol
-const string tradeSymbol = "&trade;";
-const string regSymbol = "&reg;";
-output = input.Replace(tradeSymbol, regSymbol);
+// // Set output to input, replacing the trademark symbol with the registered trademark symbol
+// const string tradeSymbol = "&trade;";
+// const string regSymbol = "&reg;";
+// output = input.Replace(tradeSymbol, regSymbol);
 
-// Remove the opening <div> tag
-const string openDiv = "<div>";
-int divStart = output.IndexOf(openDiv);
-output = output.Remove(divStart, openDiv.Length);
+// // Remove the opening <div> tag
+// const string openDiv = "<div>";
+// int divStart = output.IndexOf(openDiv);
+// output = output.Remove(divStart, openDiv.Length);
 
-// Remove the closing </div> tag and add "Output:" to the beginning
-const string closeDiv = "</div>";
-int divCloseStart = output.IndexOf(closeDiv);
-output = "Output: " + output.Remove(divCloseStart, closeDiv.Length);
+// // Remove the closing </div> tag and add "Output:" to the beginning
+// const string closeDiv = "</div>";
+// int divCloseStart = output.IndexOf(closeDiv);
+// output = "Output: " + output.Remove(divCloseStart, closeDiv.Length);
 
-Console.WriteLine(quantity);
-Console.WriteLine(output);
+// Console.WriteLine(quantity);
+// Console.WriteLine(output);
+
+//Metodos
+
+// Console.WriteLine("Generating random numbers:");
+// DisplayRandomNumbers();
+
+// void DisplayRandomNumbers() 
+// {
+//     Random random = new Random();
+
+//     for (int i = 0; i < 5; i++) 
+//     {
+//         Console.Write($"{random.Next(1, 100)} ");
+//     }
+
+//     Console.WriteLine();
+// }
+
+//Ejercicio Metodo 01
+
+// int[] times = {800, 1200, 1600, 2000};
+// int diff = 0;
+
+// Console.WriteLine("Enter current GMT");
+// int currentGMT = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine("Current Medicine Schedule:");
+// DisplayTimes();
+
+// Console.WriteLine("Enter new GMT");
+// int newGMT = Convert.ToInt32(Console.ReadLine());
+
+// if (Math.Abs(newGMT) > 12 || Math.Abs(currentGMT) > 12)
+// {
+//     Console.WriteLine("Invalid GMT");
+// }
+// else if (newGMT <= 0 && currentGMT <= 0 || newGMT >= 0 && currentGMT >= 0) 
+// {
+//     diff = 100 * (Math.Abs(newGMT) - Math.Abs(currentGMT));
+//     AdjustTimes();
+// } 
+// else 
+// {
+//     diff = 100 * (Math.Abs(newGMT) + Math.Abs(currentGMT));
+//     AdjustTimes();
+// }
+
+// Console.WriteLine("New Medicine Schedule:");
+// DisplayTimes();
+
+// void DisplayTimes()
+// {
+//     /* Format and display medicine times */
+//     foreach (int val in times)
+//     {
+//         string time = val.ToString();
+//         int len = time.Length;
+
+//         if (len >= 3)
+//         {
+//             time = time.Insert(len - 2, ":");
+//         }
+//         else if (len == 2)
+//         {
+//             time = time.Insert(0, "0:");
+//         }
+//         else
+//         {
+//             time = time.Insert(0, "0:0");
+//         }
+
+//         Console.Write($"{time} ");
+//     }
+//     Console.WriteLine();
+// }
+
+// void AdjustTimes() 
+// {
+//     /* Adjust the times by adding the difference, keeping the value within 24 hours */
+//     for (int i = 0; i < times.Length; i++) 
+//     {
+//         times[i] = ((times[i] + diff)) % 2400;
+//     }
+// }
+
+//Ejercicio 02 Metodos
+// string[] ipv4Input = {"107.31.1.5", "255.0.0.255", "555..0.555", "255...255"};
+// string[] address;
+// bool validLength = false;
+// bool validZeroes = false;
+// bool validRange = false;
+
+// foreach (string ip in ipv4Input) 
+// {
+//     address = ip.Split(".", StringSplitOptions.RemoveEmptyEntries);
+
+//     ValidateLength(); 
+//     ValidateZeroes(); 
+//     ValidateRange();
+
+//     if (validLength && validZeroes && validRange) 
+//     {
+//         Console.WriteLine($"{ip} is a valid IPv4 address");
+//     } 
+//     else 
+//     {
+//         Console.WriteLine($"{ip} is an invalid IPv4 address");
+//     }
+// }
+
+// void ValidateLength() 
+// {
+//     validLength = address.Length == 4;
+// };
+
+// void ValidateZeroes() 
+// {
+//     foreach (string number in address) 
+//     {
+//         if (number.Length > 1 && number.StartsWith("0")) 
+//         {
+//             validZeroes = false;
+//             return;
+//         }
+//     }
+
+//     validZeroes = true;
+// }
+
+// void ValidateRange() 
+// {
+//     foreach (string number in address) 
+//     {
+//         int value = int.Parse(number);
+//         if (value < 0 || value > 255) 
+//         {
+//             validRange = false;
+//             return;
+//         }
+//     }
+//     validRange = true;
+// }
+
+//Ejercicio de metodos 03
+// using System;
+
+// class Program
+// {
+//     static void Main()
+//     {
+//         Console.WriteLine("A fortune teller whispers the following words:");
+//         TellFortune();
+
+//         // Puedes llamar al método otra vez si quieres otra predicción
+//         // TellFortune();
+//     }
+
+//     static void TellFortune()
+//     {
+//         Random random = new Random();
+//         int luck = random.Next(100); // Genera un número entre 0 y 99
+
+//         string[] text = {
+//             "You have much to",
+//             "Today is a day to",
+//             "Whatever work you do",
+//             "This is an ideal time to"
+//         };
+
+//         string[] good = {
+//             "look forward to.",
+//             "try new things!",
+//             "is likely to succeed.",
+//             "accomplish your dreams!"
+//         };
+
+//         string[] bad = {
+//             "fear.",
+//             "avoid major decisions.",
+//             "may have unexpected outcomes.",
+//             "re-evaluate your life."
+//         };
+
+//         string[] neutral = {
+//             "appreciate.",
+//             "enjoy time with friends.",
+//             "should align with your values.",
+//             "get in tune with nature."
+//         };
+
+//         // Selecciona el tipo de suerte según el valor de luck
+//         string[] fortune = (luck > 75) ? good :
+//                            (luck < 25) ? bad :
+//                            neutral;
+
+//         for (int i = 0; i < 4; i++)
+//         {
+//             Console.Write($"{text[i]} {fortune[i]} ");
+//         }
+
+//         Console.WriteLine(); // Salto de línea al final
+//     }
+// }
+
+// Ejercio 03 otra forma de hacerlo 
+// Random random = new Random();
+// int luck = random.Next(100);
+
+// string[] text = {"You have much to", "Today is a day to", "Whatever work you do", "This is an ideal time to"};
+// string[] good = {"look forward to.", "try new things!", "is likely to succeed.", "accomplish your dreams!"};
+// string[] bad = {"fear.", "avoid major decisions.", "may have unexpected outcomes.", "re-evaluate your life."};
+// string[] neutral = {"appreciate.", "enjoy time with friends.", "should align with your values.", "get in tune with nature."};
+
+// TellFortune();
+
+// void TellFortune() 
+// {
+//     Console.WriteLine("A fortune teller whispers the following words:");
+//     string[] fortune = (luck > 75 ? good : (luck < 25 ? bad : neutral));
+//     for (int i = 0; i < 4; i++) 
+//     {
+//         Console.Write($"{text[i]} {fortune[i]} ");
+//     }
+// }
+
+
+//Ejercicio Metodos
+
+// int[] schedule = {800, 1200, 1600, 2000};
+
+// // LLamar al metodo que se Muestra en pantalla
+// DisplayAdjustedTimes(schedule, 6, -6);
+
+// // Metodo
+// void DisplayAdjustedTimes(int[] times, int currentGMT, int newGMT) 
+// {
+//     int diff = 0;
+// if (Math.Abs(newGMT) > 12 || Math.Abs(currentGMT) > 12)
+// {
+//     Console.WriteLine("Invalid GMT");
+// }
+// else if (newGMT <= 0 && currentGMT <= 0 || newGMT >= 0 && currentGMT >= 0) 
+// {
+//     diff = 100 * (Math.Abs(newGMT) - Math.Abs(currentGMT));
+// } 
+// else 
+// {
+//     diff = 100 * (Math.Abs(newGMT) + Math.Abs(currentGMT));
+// }
+
+// for (int i = 0; i < times.Length; i++) 
+// {
+//     int newTime = ((times[i] + diff)) % 2400;
+//     Console.WriteLine($"{times[i]} -> {newTime}");
+// }
+
+// }
+
+// ejemplo de metodo globales
+
+// string[] students = {"Jenna", "Ayesha", "Carlos", "Viktor"};
+
+// DisplayStudents(students);
+// DisplayStudents(new string[] {"Robert","Vanya"});
+
+// void DisplayStudents(string[] students) 
+// {
+//     foreach (string student in students)  
+//     {
+//         Console.Write($"{student}, ");
+//     }
+//     Console.WriteLine();
+// }
+
+
+// siguiente ejercicio metodo
+
+// double pi = 3.14159;
+
+// //Llamada al metodo
+// PrintCircleInfo(12);
+// PrintCircleInfo(24);
+
+// // Metodos
+// void PrintCircleArea(int radius)
+// {
+//     double area = pi * (radius * radius);
+//     Console.WriteLine($"Area = {area}");
+// }
+
+// void PrintCircleCircumference(int radius)
+// {
+//     double circumference = 2 * pi * radius;
+//     Console.WriteLine($"Circumference = {circumference}");
+// }
+
+// void PrintCircleInfo(int radius) 
+// {
+//     Console.WriteLine($"Circle with radius {radius}");
+//     PrintCircleArea(radius);
+//     PrintCircleCircumference(radius);
+// }
+
+//Ejercicio 1 Metodos
+
+// int a = 3;
+// int b = 4;
+// int c = 0;
+
+// Multiply(a, b, c);
+// Console.WriteLine($"global statement: {a} x {b} = {c}");
+
+// void Multiply(int a, int b, int c) 
+// {
+//     c = a * b;
+//     Console.WriteLine($"inside Multiply method: {a} x {b} = {c}");
+// }
+
+// Ejercicio 2 Metodos
+
+// int[] array = {1, 2, 3, 4, 5};
+
+// PrintArray(array);
+// Clear(array);
+// PrintArray(array);
+
+// void PrintArray(int[] array) 
+// {
+//     foreach (int a in array) 
+//     {
+//         Console.Write($"{a} ");
+//     }
+//     Console.WriteLine();
+// }
+
+// void Clear(int[] array) 
+// {
+//     for (int i = 0; i < array.Length; i++) 
+//     {
+//         array[i] = 0;
+//     }
+// }
+
+// Ejercicio 3 Metodo: corregir errores en cadenas
+
+// string status = "Healthy";
+
+// Console.WriteLine($"Start: {status}");
+// SetHealth(false);
+// Console.WriteLine($"End: {status}");
+
+// void SetHealth(bool isHealthy) 
+// {
+//     status = (isHealthy ? "Healthy" : "Unhealthy");
+//     Console.WriteLine($"Middle: {status}");
+// }
+
+//Ejercicio
+
+// string[] guestList = {"Rebecca", "Nadia", "Noor", "Jonte"};
+// string[] rsvps = new string[10];
+// int count = 0;
+
+// //LLamada del metodo
+// RSVP("Rebecca", 1, "none", true);
+// RSVP("Nadia", 2, "Nuts", true);
+// RSVP("Linh", 2, "none", false);
+// RSVP("Tony", 1, "Jackfruit", true);
+// RSVP("Noor", 4, "none", false);
+// RSVP("Jonte", 2, "Stone fruit", false);
+// ShowRSVPs();
+
+
+// //Metodo 
+// void RSVP(string name, int partySize, string allergies, bool inviteOnly) 
+// {
+//     if (inviteOnly)
+//     {
+//         // search guestList before adding rsvp
+//          bool found = false;
+//     foreach (string guest in guestList)
+//     {
+//         if (guest.Equals(name)) {
+//             found = true;
+//             break;
+//         }
+//     }
+//     if (!found)
+//     {
+//         Console.WriteLine($"Sorry, {name} is not on the guest list");
+//         return;
+//     }
+//     }
+
+//     rsvps[count] = $"Name: {name}, \tParty Size: {partySize}, \tAllergies: {allergies}";
+//     count++;
+// }
+
+// void ShowRSVPs()
+// {
+//     Console.WriteLine("\nTotal RSVPs:");
+//     for (int i = 0; i < count; i++)
+//     {
+//         Console.WriteLine(rsvps[i]);
+//     }
+// }
+
+//Desafio contoso metodo con parametros
+
+string[,] corporate = 
+{
+    {"Robert", "Bavin"}, {"Simon", "Bright"},
+    {"Kim", "Sinclair"}, {"Aashrita", "Kamath"},
+    {"Sarah", "Delucchi"}, {"Sinan", "Ali"}
+};
+
+string[,] external = 
+{
+    {"Vinnie", "Ashton"}, {"Cody", "Dysart"},
+    {"Shay", "Lawrence"}, {"Daren", "Valdes"}
+};
+
+string externalDomain = "hayworth.com";
+
+for (int i = 0; i < corporate.GetLength(0); i++) 
+{
+    // display internal email addresses
+    DisplayEmail(first: corporate[i,0], last: corporate[i,1]);
+}
+
+for (int i = 0; i < external.GetLength(0); i++) 
+{
+    DisplayEmail(first: external[i,0], last: external[i,1], domain: externalDomain);
+}
+
+void DisplayEmail(string first, string last, string domain = "contoso.com") 
+	{
+		string email = first.Substring(0, 2) + last;
+		email = email.ToLower();
+		Console.WriteLine($"{email}@{domain}");
+	}

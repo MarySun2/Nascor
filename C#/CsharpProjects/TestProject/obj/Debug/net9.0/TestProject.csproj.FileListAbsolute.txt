@@ -3,3 +3,13 @@ C:\Users\maris\OneDrive\Escritorio\Cursos\17. Nascor\Azure\Practica\Azure Functi
 C:\Users\maris\OneDrive\Escritorio\Cursos\17. Nascor\Azure\Practica\Azure Function\Nascor\C#\CsharpProjects\TestProject\obj\Debug\net9.0\TestProject.AssemblyInfo.cs
 C:\Users\maris\OneDrive\Escritorio\Cursos\17. Nascor\Azure\Practica\Azure Function\Nascor\C#\CsharpProjects\TestProject\obj\Debug\net9.0\TestProject.csproj.CoreCompileInputs.cache
 C:\Users\maris\OneDrive\Escritorio\Cursos\17. Nascor\Azure\Practica\Azure Function\Nascor\C#\CsharpProjects\TestProject\obj\Debug\net9.0\TestProject.sourcelink.json
+C:\Users\maris\OneDrive\Escritorio\Cursos\17. Nascor\Azure\Practica\Azure Function\Nascor\C#\CsharpProjects\TestProject\bin\Debug\net9.0\TestProject.exe
+C:\Users\maris\OneDrive\Escritorio\Cursos\17. Nascor\Azure\Practica\Azure Function\Nascor\C#\CsharpProjects\TestProject\bin\Debug\net9.0\TestProject.deps.json
+C:\Users\maris\OneDrive\Escritorio\Cursos\17. Nascor\Azure\Practica\Azure Function\Nascor\C#\CsharpProjects\TestProject\bin\Debug\net9.0\TestProject.runtimeconfig.json
+C:\Users\maris\OneDrive\Escritorio\Cursos\17. Nascor\Azure\Practica\Azure Function\Nascor\C#\CsharpProjects\TestProject\bin\Debug\net9.0\TestProject.dll
+C:\Users\maris\OneDrive\Escritorio\Cursos\17. Nascor\Azure\Practica\Azure Function\Nascor\C#\CsharpProjects\TestProject\bin\Debug\net9.0\TestProject.pdb
+C:\Users\maris\OneDrive\Escritorio\Cursos\17. Nascor\Azure\Practica\Azure Function\Nascor\C#\CsharpProjects\TestProject\obj\Debug\net9.0\TestProject.dll
+C:\Users\maris\OneDrive\Escritorio\Cursos\17. Nascor\Azure\Practica\Azure Function\Nascor\C#\CsharpProjects\TestProject\obj\Debug\net9.0\refint\TestProject.dll
+C:\Users\maris\OneDrive\Escritorio\Cursos\17. Nascor\Azure\Practica\Azure Function\Nascor\C#\CsharpProjects\TestProject\obj\Debug\net9.0\TestProject.pdb
+C:\Users\maris\OneDrive\Escritorio\Cursos\17. Nascor\Azure\Practica\Azure Function\Nascor\C#\CsharpProjects\TestProject\obj\Debug\net9.0\TestProject.genruntimeconfig.cache
+C:\Users\maris\OneDrive\Escritorio\Cursos\17. Nascor\Azure\Practica\Azure Function\Nascor\C#\CsharpProjects\TestProject\obj\Debug\net9.0\ref\TestProject.dll
