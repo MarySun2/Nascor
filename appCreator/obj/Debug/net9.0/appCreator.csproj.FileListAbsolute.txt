@@ -1,0 +1,6 @@
+C:\Users\maris\OneDrive\Escritorio\Cursos\17. Nascor\Azure\Practica\Azure Function\Nascor\appCreator\obj\Debug\net9.0\appCreator.csproj.AssemblyReference.cache
+C:\Users\maris\OneDrive\Escritorio\Cursos\17. Nascor\Azure\Practica\Azure Function\Nascor\appCreator\obj\Debug\net9.0\appCreator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maris\OneDrive\Escritorio\Cursos\17. Nascor\Azure\Practica\Azure Function\Nascor\appCreator\obj\Debug\net9.0\appCreator.AssemblyInfoInputs.cache
+C:\Users\maris\OneDrive\Escritorio\Cursos\17. Nascor\Azure\Practica\Azure Function\Nascor\appCreator\obj\Debug\net9.0\appCreator.AssemblyInfo.cs
+C:\Users\maris\OneDrive\Escritorio\Cursos\17. Nascor\Azure\Practica\Azure Function\Nascor\appCreator\obj\Debug\net9.0\appCreator.csproj.CoreCompileInputs.cache
+C:\Users\maris\OneDrive\Escritorio\Cursos\17. Nascor\Azure\Practica\Azure Function\Nascor\appCreator\obj\Debug\net9.0\appCreator.sourcelink.json
