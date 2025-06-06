@@ -2142,20 +2142,235 @@ Console.WriteLine($"{firstName} purchased {widgetsPurchased} widgets.");
 
 //METODOS PARTE 2
 
-double usd = 23.73;
-int vnd = UsdToVnd(usd);
+// double usd = 23.73;
+// int vnd = UsdToVnd(usd);
 
-Console.WriteLine($"${usd} USD = ${vnd} VND");
-Console.WriteLine($"${vnd} VND = ${VndToUsd(vnd)} USD");
+// Console.WriteLine($"${usd} USD = ${vnd} VND");
+// Console.WriteLine($"${vnd} VND = ${VndToUsd(vnd)} USD");
 
-int UsdToVnd(double usd) 
+// int UsdToVnd(double usd) 
+// {
+//     int rate = 23500;
+//     return (int) (rate * usd);
+// }
+
+// double VndToUsd(int vnd) 
+// {
+//     double rate = 23500;
+//     return vnd / rate;
+// }
+
+////
+//Metodo que devuelve cadenas
+
+// string input = "there are snakes at the zoo";
+
+// Console.WriteLine(input);
+// Console.WriteLine(ReverseSentence(input));
+
+// string ReverseSentence(string input) 
+// {
+//     string result = "";
+//     string[] words = input.Split(" ");
+//     foreach(string word in words) 
+//     {
+//         result += ReverseWord(word) + " ";
+//     }
+//     return result.Trim();
+// }
+
+// string ReverseWord(string word) 
+// {
+//     string result = "";
+//     for (int i = word.Length - 1; i >= 0; i--) 
+//     {
+//         result += word[i];
+//     }
+//     return result;
+// }
+
+////
+/// Metodo Palindromo
+// string[] words = {"racecar" ,"talented", "deified", "tent", "tenet"};
+
+// Console.WriteLine("Is it a palindrome?");
+// foreach (string word in words)
+// {
+//     Console.WriteLine($"{word}: {IsPalindrome(word)}");
+// }
+
+// bool IsPalindrome(string word) 
+// {
+//     int start = 0;
+//     int end = word.Length - 1;
+
+//     while (start < end) 
+//     {
+//         if (word[start] != word[end]) 
+//         {
+//             return false;
+//         }
+//         start++;
+//         end--;
+//     }
+
+//     return true;
+// }
+
+////
+/// Ejercicio Devolver matrices de metodos
+
+// int target = 60;
+// int[] coins = new int[] {5, 5, 50, 25, 25, 10, 5};
+// int[] result = TwoCoins(coins, target);
+
+// int[] TwoCoins(int[] coins, int target)
+// {
+//     for (int curr = 0; curr < coins.Length; curr++)
+//     {
+//         for (int next = curr + 1; next < coins.Length; next++)
+//         {
+//             if (coins[curr] + coins[next] == target)
+//             {
+//                 return new int[] { curr, next };
+//             }
+
+//         }
+//     }
+
+//     return new int[0];
+// }
+
+// if (result.Length == 0) 
+// {
+//     Console.WriteLine("No two coins make change");
+// } 
+// else 
+// {
+//     Console.WriteLine($"Change found at positions {result[0]} and {result[1]}");
+// }
+////
+//Otro ejercicio de monedas
+
+// int target = 80;
+// int[] coins = new int[] {5, 5, 50, 25, 25, 10, 5};
+// int[,] result = TwoCoins(coins, target);
+
+// if (result.Length == 0) 
+// {
+//     Console.WriteLine("No two coins make change");
+// } 
+// else 
+// {
+//     Console.WriteLine("Change found at positions:");
+//     for (int i = 0; i < result.GetLength(0); i++) 
+//     {
+//         if (result[i,0] == -1) 
+//         {
+//             break;
+//         }
+//         Console.WriteLine($"{result[i,0]},{result[i,1]}");
+//     }
+// }
+
+// int[,] TwoCoins(int[] coins, int target) 
+// {
+//     int[,] result = {{-1,-1},{-1,-1},{-1,-1},{-1,-1},{-1,-1}};
+//     int count = 0;
+
+//     for (int curr = 0; curr < coins.Length; curr++) 
+//     {
+//         for (int next = curr + 1; next < coins.Length; next++) 
+//         {    
+//             if (coins[curr] + coins[next] == target) 
+//             {
+//                 result[count, 0] = curr;
+//                 result[count, 1] = next;
+//                 count++;
+//             }
+//             if (count == result.GetLength(0)) 
+//             {
+//                 return result;
+//             }
+//         }
+//     }
+//     return (count == 0) ? new int[0,0] : result;
+// }
+
+////
+/// Juego de reto
+using System;
+
+Random random = new Random();
+
+Console.WriteLine("¿Quieres jugar? (S/N)");
+if (ShouldPlay())
 {
-    int rate = 23500;
-    return (int) (rate * usd);
+    Console.WriteLine("¡Perfecto! 🎲 Empecemos el juego.");
+    PlayGame();
+}
+else
+{
+    Console.WriteLine("¡No quieres jugar! Nos vemos en otra ocasión. 👋");
 }
 
-double VndToUsd(int vnd) 
+void PlayGame()
 {
-    double rate = 23500;
-    return vnd / rate;
+    var play = true;
+
+    while (play)
+    {
+        int target = GetTarget();  // Número aleatorio entre 1 y 5
+        int roll = GetRoll();      // Número aleatorio entre 1 y 6
+
+        Console.WriteLine($"\n¡Lanza un número mayor que {target} para ganar!");
+        Console.WriteLine($"Has lanzado un {roll}");
+        Console.WriteLine(WinOrLose(roll, target));
+
+        Console.WriteLine("\n¿Quieres jugar otra vez? (S/N)");
+        play = ShouldPlay();  // Preguntar si quiere seguir
+    }
+
+    // Mensaje final cuando ya no quiere jugar
+    Console.WriteLine("¡No quieres jugar! Nos vemos en otra ocasión. 👋");
+}
+
+// Genera un número objetivo aleatorio entre 1 y 5
+int GetTarget()
+{
+    return random.Next(1, 6); // 6 no se incluye, así que genera entre 1 y 5
+}
+
+// Genera un número aleatorio de dado (entre 1 y 6)
+int GetRoll()
+{
+    return random.Next(1, 7); // 7 no se incluye, así que genera entre 1 y 6
+}
+
+// Pregunta al usuario si quiere jugar y devuelve true o false
+bool ShouldPlay()
+{
+    string response = Console.ReadLine().Trim().ToLower();
+
+    // Validación: mientras la respuesta no sea válida, vuelve a preguntar
+    while (response != "s" && response != "si" && response != "n" && response != "no")
+    {
+        Console.WriteLine("Por favor escribe S/Sí para sí o N/No para no:");
+        response = Console.ReadLine().Trim().ToLower();
+    }
+
+    return response == "s" || response == "si";
+}
+
+// Determina si el jugador gana o pierde
+string WinOrLose(int roll, int target)
+{
+    if (roll > target)
+    {
+        return "¡Ganaste! 🎉";
+    }
+    else
+    {
+        return "¡Perdiste! 😢";
+    }
 }
