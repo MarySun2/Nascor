@@ -88,7 +88,7 @@
 
 // Ejercicio 9 Matrices
 
- // Declaración del array con identificadores de pedidos
+// Declaración del array con identificadores de pedidos
 // string[] fraudulentOrderIDs = ["B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179"];
 
 // Console.WriteLine("Pedidos fraudulentos que comienzan con 'B':");
@@ -101,9 +101,9 @@
 //                 Console.WriteLine(orderID);
 //             }
 //         }
-    
 
-    //Ejercicio 10 Variables y comentarios
+
+//Ejercicio 10 Variables y comentarios
 
 // string firstName = "Bob";
 // int widgetsPurchased = 7;
@@ -360,28 +360,28 @@ Console.WriteLine($"{firstName} purchased {widgetsPurchased} widgets.");
 //         string myValue = "a";
 //         Console.WriteLine(myValue != "a");
 
-        // Ejemplo de operador condicional (?:)
-        //<evaluate this condition> ? <if condition is true, return this value> : <if condition is false, return this value>
+// Ejemplo de operador condicional (?:)
+//<evaluate this condition> ? <if condition is true, return this value> : <if condition is false, return this value>
 
-        // Otro ejemplo de operador Condicional
-        // int saleAmount = 1001;
-        // int discount = saleAmount > 1000 ? 100 : 50;
-        // Console.WriteLine($"Discount: {discount}");
+// Otro ejemplo de operador Condicional
+// int saleAmount = 1001;
+// int discount = saleAmount > 1000 ? 100 : 50;
+// Console.WriteLine($"Discount: {discount}");
 
-        // //Crear un condicional con cara y cruz con 50% probavilidad que salga el dado
-        // // primera forma de hacerlo
-        // Random coin = new Random();
+// //Crear un condicional con cara y cruz con 50% probavilidad que salga el dado
+// // primera forma de hacerlo
+// Random coin = new Random();
 
-        // int flip = coin.Next(0, 2);
-        // Console.WriteLine((flip == 0) ? "heads" : "tails");
+// int flip = coin.Next(0, 2);
+// Console.WriteLine((flip == 0) ? "heads" : "tails");
 
-        // // segunda forma de hacerlo
-        // Console.WriteLine(coin.Next(0, 2) == 0 ? "heads" : "tails");
+// // segunda forma de hacerlo
+// Console.WriteLine(coin.Next(0, 2) == 0 ? "heads" : "tails");
 
-        // // Tercera forma de hacerlo
-        // Console.WriteLine(new Random().Next(2) == 0 ? "Cara" : "Cruz");
+// // Tercera forma de hacerlo
+// Console.WriteLine(new Random().Next(2) == 0 ? "Cara" : "Cruz");
 
-        // Ejercicio 13
+// Ejercicio 13
 // string permission = "Admin|Manager";
 // int level = 53;
 
@@ -728,11 +728,11 @@ Console.WriteLine($"{firstName} purchased {widgetsPurchased} widgets.");
 //             current = random.Next(1, 11); // Genera un nuevo número aleatorio
 //         }
 
-        // Console.WriteLine(current); // Finalmente imprime el 7 y termina
-    
+// Console.WriteLine(current); // Finalmente imprime el 7 y termina
 
-    //Ejercicio siguiente
-    
+
+//Ejercicio siguiente
+
 // Random random = new Random();
 // int current = random.Next(1, 11);
 
@@ -777,7 +777,7 @@ Console.WriteLine($"{firstName} purchased {widgetsPurchased} widgets.");
 // do
 // {
 //     readResult = Console.ReadLine();
-    
+
 //     if (readResult != null)
 //     {
 //         if (readResult.Length >= 3)
@@ -867,211 +867,211 @@ Console.WriteLine($"{firstName} purchased {widgetsPurchased} widgets.");
 
 // Declarar el array de cadenas
 
-        // string[] myStrings = new string[2] 
-        // { 
-        //     "I like pizza. I like roast chicken. I like salad", 
-        //     "I like all three of the menu choices" 
-        // };
+// string[] myStrings = new string[2] 
+// { 
+//     "I like pizza. I like roast chicken. I like salad", 
+//     "I like all three of the menu choices" 
+// };
 
-        // // Bucle externo para recorrer cada cadena en el array
-        // foreach (string myString in myStrings)
-        // {
-        //     string tempString = myString;  // Copia de la cadena actual
-        //     int periodLocation;  // Almacena la ubicación del punto
+// // Bucle externo para recorrer cada cadena en el array
+// foreach (string myString in myStrings)
+// {
+//     string tempString = myString;  // Copia de la cadena actual
+//     int periodLocation;  // Almacena la ubicación del punto
 
-        //     // Bucle interno para extraer frases separadas por "."
-        //     do
-        //     {
-        //         periodLocation = tempString.IndexOf("."); // Buscar el primer punto
+//     // Bucle interno para extraer frases separadas por "."
+//     do
+//     {
+//         periodLocation = tempString.IndexOf("."); // Buscar el primer punto
 
-        //         if (periodLocation != -1)
-        //         {
-        //             // Extraer la frase hasta el punto, eliminar espacios en blanco
-        //             string sentence = tempString.Substring(0, periodLocation).Trim();
-        //             Console.WriteLine(sentence); // Mostrar la frase
+//         if (periodLocation != -1)
+//         {
+//             // Extraer la frase hasta el punto, eliminar espacios en blanco
+//             string sentence = tempString.Substring(0, periodLocation).Trim();
+//             Console.WriteLine(sentence); // Mostrar la frase
 
-        //             // Eliminar la parte procesada + el punto, para continuar con la siguiente frase
-        //             tempString = tempString.Remove(0, periodLocation + 1).TrimStart();
-        //         }
-        //         else
-        //         {
-        //             // Si no hay más puntos, imprimir el resto de la cadena
-        //             Console.WriteLine(tempString.Trim());
-        //         }
+//             // Eliminar la parte procesada + el punto, para continuar con la siguiente frase
+//             tempString = tempString.Remove(0, periodLocation + 1).TrimStart();
+//         }
+//         else
+//         {
+//             // Si no hay más puntos, imprimir el resto de la cadena
+//             Console.WriteLine(tempString.Trim());
+//         }
 
-        //     } while (periodLocation != -1); // Continuar mientras haya puntos en la cadena
-        // }
+//     } while (periodLocation != -1); // Continuar mientras haya puntos en la cadena
+// }
 
-        // Ejercicio Practico
-        // Matriz multidimensional para almacenar los datos de las mascotas
-        // string[,] ourAnimals = new string[,]
-        // {
-        //     {"1", "Gato", "2", "Negro y blanco", "Juguetón", "Michi"},
-        //     {"2", "Perro", "3", "Marrón", "Amigable", "Max"},
-        //     {"3", "Gato", "", "Gris", "", ""},
-        //     {"4", "Perro", "5", "Negro", "Leal", "Rex"}
-        // };
+// Ejercicio Practico
+// Matriz multidimensional para almacenar los datos de las mascotas
+// string[,] ourAnimals = new string[,]
+// {
+//     {"1", "Gato", "2", "Negro y blanco", "Juguetón", "Michi"},
+//     {"2", "Perro", "3", "Marrón", "Amigable", "Max"},
+//     {"3", "Gato", "", "Gris", "", ""},
+//     {"4", "Perro", "5", "Negro", "Leal", "Rex"}
+// };
 
-        // while (true) // Bucle principal del menú
-        // {
-        //     // Menú principal
-        //     Console.WriteLine("\n--- Contoso Pets ---");
-        //     Console.WriteLine("1. Mostrar todas las mascotas");
-        //     Console.WriteLine("2. Agregar nueva mascota");
-        //     Console.WriteLine("3. Salir");
-        //     Console.Write("Seleccione una opción: ");
-            
-        //     string option = Console.ReadLine();
+// while (true) // Bucle principal del menú
+// {
+//     // Menú principal
+//     Console.WriteLine("\n--- Contoso Pets ---");
+//     Console.WriteLine("1. Mostrar todas las mascotas");
+//     Console.WriteLine("2. Agregar nueva mascota");
+//     Console.WriteLine("3. Salir");
+//     Console.Write("Seleccione una opción: ");
 
-        //     // Manejo de opciones
-        //     if (option == "1") 
-        //     {
-        //         Console.WriteLine("\nLista de Mascotas:");
-        //         for (int i = 0; i < ourAnimals.GetLength(0); i++)
-        //         {
-        //             Console.WriteLine($"ID: {ourAnimals[i, 0]}, Especie: {ourAnimals[i, 1]}, Edad: {ourAnimals[i, 2]} años, Color: {ourAnimals[i, 3]}, Personalidad: {ourAnimals[i, 4]}, Alias: {ourAnimals[i, 5]}");
-        //         }
-        //     }
-        //     else if (option == "2") 
-        //     {
-        //         Console.Write("Ingrese la especie (Gato o Perro): ");
-        //         string species = Console.ReadLine().Trim();
+//     string option = Console.ReadLine();
 
-        //         if (species.ToLower() != "gato" && species.ToLower() != "perro")
-        //         {
-        //             Console.WriteLine("⚠ Especie no válida. Solo se aceptan 'Gato' o 'Perro'.");
-        //             continue;
-        //         }
+//     // Manejo de opciones
+//     if (option == "1") 
+//     {
+//         Console.WriteLine("\nLista de Mascotas:");
+//         for (int i = 0; i < ourAnimals.GetLength(0); i++)
+//         {
+//             Console.WriteLine($"ID: {ourAnimals[i, 0]}, Especie: {ourAnimals[i, 1]}, Edad: {ourAnimals[i, 2]} años, Color: {ourAnimals[i, 3]}, Personalidad: {ourAnimals[i, 4]}, Alias: {ourAnimals[i, 5]}");
+//         }
+//     }
+//     else if (option == "2") 
+//     {
+//         Console.Write("Ingrese la especie (Gato o Perro): ");
+//         string species = Console.ReadLine().Trim();
 
-        //         string newId = (ourAnimals.GetLength(0) + 1).ToString();
-        //         Console.Write("Ingrese la edad (si no se conoce, deje vacío): ");
-        //         string age = Console.ReadLine().Trim();
+//         if (species.ToLower() != "gato" && species.ToLower() != "perro")
+//         {
+//             Console.WriteLine("⚠ Especie no válida. Solo se aceptan 'Gato' o 'Perro'.");
+//             continue;
+//         }
 
-        //         Console.Write("Ingrese el color o características físicas: ");
-        //         string physicalDesc = Console.ReadLine().Trim();
+//         string newId = (ourAnimals.GetLength(0) + 1).ToString();
+//         Console.Write("Ingrese la edad (si no se conoce, deje vacío): ");
+//         string age = Console.ReadLine().Trim();
 
-        //         Console.Write("Ingrese la personalidad (si no se conoce, deje vacío): ");
-        //         string personality = Console.ReadLine().Trim();
+//         Console.Write("Ingrese el color o características físicas: ");
+//         string physicalDesc = Console.ReadLine().Trim();
 
-        //         Console.Write("Ingrese el alias (si no tiene, deje vacío): ");
-        //         string alias = Console.ReadLine().Trim();
+//         Console.Write("Ingrese la personalidad (si no se conoce, deje vacío): ");
+//         string personality = Console.ReadLine().Trim();
 
-        //         // Crear nueva matriz para agregar el nuevo animal
-        //         string[,] updatedAnimals = new string[ourAnimals.GetLength(0) + 1, 6];
+//         Console.Write("Ingrese el alias (si no tiene, deje vacío): ");
+//         string alias = Console.ReadLine().Trim();
 
-        //         for (int i = 0; i < ourAnimals.GetLength(0); i++)
-        //         {
-        //             for (int j = 0; j < ourAnimals.GetLength(1); j++)
-        //             {
-        //                 updatedAnimals[i, j] = ourAnimals[i, j];
-        //             }
-        //         }
+//         // Crear nueva matriz para agregar el nuevo animal
+//         string[,] updatedAnimals = new string[ourAnimals.GetLength(0) + 1, 6];
 
-        //         // Agregar nuevo animal
-        //         updatedAnimals[ourAnimals.GetLength(0), 0] = newId;
-        //         updatedAnimals[ourAnimals.GetLength(0), 1] = species;
-        //         updatedAnimals[ourAnimals.GetLength(0), 2] = age;
-        //         updatedAnimals[ourAnimals.GetLength(0), 3] = physicalDesc;
-        //         updatedAnimals[ourAnimals.GetLength(0), 4] = personality;
-        //         updatedAnimals[ourAnimals.GetLength(0), 5] = alias;
+//         for (int i = 0; i < ourAnimals.GetLength(0); i++)
+//         {
+//             for (int j = 0; j < ourAnimals.GetLength(1); j++)
+//             {
+//                 updatedAnimals[i, j] = ourAnimals[i, j];
+//             }
+//         }
 
-        //         ourAnimals = updatedAnimals; // Actualizar la matriz principal
+//         // Agregar nuevo animal
+//         updatedAnimals[ourAnimals.GetLength(0), 0] = newId;
+//         updatedAnimals[ourAnimals.GetLength(0), 1] = species;
+//         updatedAnimals[ourAnimals.GetLength(0), 2] = age;
+//         updatedAnimals[ourAnimals.GetLength(0), 3] = physicalDesc;
+//         updatedAnimals[ourAnimals.GetLength(0), 4] = personality;
+//         updatedAnimals[ourAnimals.GetLength(0), 5] = alias;
 
-        //         Console.WriteLine("🐶🐱 ¡Mascota agregada con éxito!");
-        //     }
-        //     else if (option == "3")
-        //     {
-        //         Console.WriteLine("Saliendo del programa...");
-        //         break;
-        //     }
-        //     else
-        //     {
-        //         Console.WriteLine("⚠ Opción no válida. Intente de nuevo.");
-        //     }
-        // }
-    
-    //Ejemplo Mascotas
+//         ourAnimals = updatedAnimals; // Actualizar la matriz principal
 
-    //  string[,] ourAnimals = {
-    //         { "c1", "Cat", "2", "Small black cat", "Playful and energetic", "" },
-    //         { "c2", "Cat", "3", "Large white cat", "Calm and affectionate", "Whiskers" },
-    //         { "d1", "Dog", "5", "Brown Labrador", "Loyal and protective", "" },
-    //         { "c4", "Cat", "", "", "", "" } // Datos incompletos
-    //     };
+//         Console.WriteLine("🐶🐱 ¡Mascota agregada con éxito!");
+//     }
+//     else if (option == "3")
+//     {
+//         Console.WriteLine("Saliendo del programa...");
+//         break;
+//     }
+//     else
+//     {
+//         Console.WriteLine("⚠ Opción no válida. Intente de nuevo.");
+//     }
+// }
 
-    //     while (true)
-    //     {
-    //         // En caso que sea Exit
-    //         Console.WriteLine("Enter 4 to complete nickname and personality description, or type 'exit' to quit:");
-    //         string userInput = Console.ReadLine();
-    //         if (userInput.ToLower() == "exit")
-    //             break;
-            
-    //         //En caso que sea 4
-    //         if (userInput == "4")
-    //         {
-    //             for (int i = 0; i < ourAnimals.GetLength(0); i++)
-    //             {
-    //                 if (string.IsNullOrWhiteSpace(ourAnimals[i, 5])) // Nickname vacío
-    //                 {
-    //                     Console.Write($"Enter a nickname for ID #: {ourAnimals[i, 0]}: ");
-    //                     string nickname;
-    //                     do
-    //                     {
-    //                         nickname = Console.ReadLine();
-    //                         if (string.IsNullOrWhiteSpace(nickname))
-    //                             Console.Write("Nickname cannot be empty. Enter a valid nickname: ");
-    //                     } while (string.IsNullOrWhiteSpace(nickname));
-    //                     ourAnimals[i, 5] = nickname;
-    //                 }
+//Ejemplo Mascotas
 
-    //                 if (string.IsNullOrWhiteSpace(ourAnimals[i, 4])) // Descripción de personalidad vacía
-    //                 {
-    //                     Console.Write($"Enter a personality description for ID #: {ourAnimals[i, 0]} (likes or dislikes, tricks, energy level): ");
-    //                     string personality;
-    //                     do
-    //                     {
-    //                         personality = Console.ReadLine();
-    //                         if (string.IsNullOrWhiteSpace(personality))
-    //                             Console.Write("Personality description cannot be empty. Enter a valid description: ");
-    //                     } while (string.IsNullOrWhiteSpace(personality));
-    //                     ourAnimals[i, 4] = personality;
-    //                 }
-    //             }
-    //             Console.WriteLine("Nickname and personality description fields are complete for all of our friends.\nPress the Enter key to continue.");
-    //             Console.ReadLine();
-    //         }
-    //     }
+//  string[,] ourAnimals = {
+//         { "c1", "Cat", "2", "Small black cat", "Playful and energetic", "" },
+//         { "c2", "Cat", "3", "Large white cat", "Calm and affectionate", "Whiskers" },
+//         { "d1", "Dog", "5", "Brown Labrador", "Loyal and protective", "" },
+//         { "c4", "Cat", "", "", "", "" } // Datos incompletos
+//     };
+
+//     while (true)
+//     {
+//         // En caso que sea Exit
+//         Console.WriteLine("Enter 4 to complete nickname and personality description, or type 'exit' to quit:");
+//         string userInput = Console.ReadLine();
+//         if (userInput.ToLower() == "exit")
+//             break;
+
+//         //En caso que sea 4
+//         if (userInput == "4")
+//         {
+//             for (int i = 0; i < ourAnimals.GetLength(0); i++)
+//             {
+//                 if (string.IsNullOrWhiteSpace(ourAnimals[i, 5])) // Nickname vacío
+//                 {
+//                     Console.Write($"Enter a nickname for ID #: {ourAnimals[i, 0]}: ");
+//                     string nickname;
+//                     do
+//                     {
+//                         nickname = Console.ReadLine();
+//                         if (string.IsNullOrWhiteSpace(nickname))
+//                             Console.Write("Nickname cannot be empty. Enter a valid nickname: ");
+//                     } while (string.IsNullOrWhiteSpace(nickname));
+//                     ourAnimals[i, 5] = nickname;
+//                 }
+
+//                 if (string.IsNullOrWhiteSpace(ourAnimals[i, 4])) // Descripción de personalidad vacía
+//                 {
+//                     Console.Write($"Enter a personality description for ID #: {ourAnimals[i, 0]} (likes or dislikes, tricks, energy level): ");
+//                     string personality;
+//                     do
+//                     {
+//                         personality = Console.ReadLine();
+//                         if (string.IsNullOrWhiteSpace(personality))
+//                             Console.Write("Personality description cannot be empty. Enter a valid description: ");
+//                     } while (string.IsNullOrWhiteSpace(personality));
+//                     ourAnimals[i, 4] = personality;
+//                 }
+//             }
+//             Console.WriteLine("Nickname and personality description fields are complete for all of our friends.\nPress the Enter key to continue.");
+//             Console.ReadLine();
+//         }
+//     }
 
 
-    //Ejercicio con matrices  
+//Ejercicio con matrices  
 
-    // string[] values = { "12.3", "45", "ABC", "11", "DEF" };
-        
-    //     string message = "";  // Variable para almacenar las letras.
-    //     double total = 0;     // Variable para almacenar la suma de los números.
+// string[] values = { "12.3", "45", "ABC", "11", "DEF" };
 
-    //     foreach (string value in values)
-    //     {
-    //         if (value.All(char.IsLetter))  // Si es alfabético, concatenar.
-    //         {
-    //             message += value;
-    //         }
-    //         else  // Si no es alfabético, intentar convertirlo a número.
-    //         {
-    //             if (double.TryParse(value, out double num)) 
-    //             {
-    //                 total += num;  // Si es numérico, sumarlo al total.
-    //             }
-    //         }
-    //     }
+//     string message = "";  // Variable para almacenar las letras.
+//     double total = 0;     // Variable para almacenar la suma de los números.
 
-        // Mostrar el resultado.
-        // Console.WriteLine($"Message: {message}");
-        // Console.WriteLine($"Total: {total}");
-    
+//     foreach (string value in values)
+//     {
+//         if (value.All(char.IsLetter))  // Si es alfabético, concatenar.
+//         {
+//             message += value;
+//         }
+//         else  // Si no es alfabético, intentar convertirlo a número.
+//         {
+//             if (double.TryParse(value, out double num)) 
+//             {
+//                 total += num;  // Si es numérico, sumarlo al total.
+//             }
+//         }
+//     }
 
-    // Una forma mas sencilla de realizar el ejercicio
+// Mostrar el resultado.
+// Console.WriteLine($"Message: {message}");
+// Console.WriteLine($"Total: {total}");
+
+
+// Una forma mas sencilla de realizar el ejercicio
 //     string[] values = { "12.3", "45", "ABC", "11", "DEF" };
 
 // decimal total = 0m;
@@ -1094,20 +1094,20 @@ Console.WriteLine($"{firstName} purchased {widgetsPurchased} widgets.");
 
 // Ejercicio x por realizar
 
-        // int value1 = 11;
-        // decimal value2 = 6.2m;
-        // float value3 = 4.3f;
+// int value1 = 11;
+// decimal value2 = 6.2m;
+// float value3 = 4.3f;
 
-        // //int result1 = (int)Math.Round(value1 / value2);
-        // int result1 = Convert.ToInt32(value1/value2);
-        // decimal result2 = value2 / (decimal)value3;
-        // float result3 = value3 / value1;
+// //int result1 = (int)Math.Round(value1 / value2);
+// int result1 = Convert.ToInt32(value1/value2);
+// decimal result2 = value2 / (decimal)value3;
+// float result3 = value3 / value1;
 
-        // Console.WriteLine($"Divide value1 by value2, display the result as an int: {result1}");
-        // Console.WriteLine($"Divide value2 by value3, display the result as a decimal: {result2}");
-        // Console.WriteLine($"Divide value3 by value1, display the result as a float: {result3}");
-    
-    //Ejercicio de  Sort() y Reverse()
+// Console.WriteLine($"Divide value1 by value2, display the result as an int: {result1}");
+// Console.WriteLine($"Divide value2 by value3, display the result as a decimal: {result2}");
+// Console.WriteLine($"Divide value3 by value1, display the result as a float: {result3}");
+
+//Ejercicio de  Sort() y Reverse()
 
 //     string[] pallets = [ "B14", "A11", "B12", "A13" ];
 
@@ -1364,7 +1364,7 @@ Console.WriteLine($"{firstName} purchased {widgetsPurchased} widgets.");
 
 //  Console.WriteLine(formattedLine);
 
- //
+//
 
 //  string paymentId = "769C";
 //  string payeeName = "Mr. Stephen Ortega";
@@ -2299,78 +2299,220 @@ Console.WriteLine($"{firstName} purchased {widgetsPurchased} widgets.");
 
 ////
 /// Juego de reto
+// using System;
+
+// Random random = new Random();
+
+// Console.WriteLine("¿Quieres jugar? (S/N)");
+// if (ShouldPlay())
+// {
+//     Console.WriteLine("¡Perfecto! 🎲 Empecemos el juego.");
+//     PlayGame();
+// }
+// else
+// {
+//     Console.WriteLine("¡No quieres jugar! Nos vemos en otra ocasión. 👋");
+// }
+
+// void PlayGame()
+// {
+//     var play = true;
+
+//     while (play)
+//     {
+//         int target = GetTarget();  // Número aleatorio entre 1 y 5
+//         int roll = GetRoll();      // Número aleatorio entre 1 y 6
+
+//         Console.WriteLine($"\n¡Lanza un número mayor que {target} para ganar!");
+//         Console.WriteLine($"Has lanzado un {roll}");
+//         Console.WriteLine(WinOrLose(roll, target));
+
+//         Console.WriteLine("\n¿Quieres jugar otra vez? (S/N)");
+//         play = ShouldPlay();  // Preguntar si quiere seguir
+//     }
+
+//     // Mensaje final cuando ya no quiere jugar
+//     Console.WriteLine("¡No quieres jugar! Nos vemos en otra ocasión. 👋");
+// }
+
+// // Genera un número objetivo aleatorio entre 1 y 5
+// int GetTarget()
+// {
+//     return random.Next(1, 6); // 6 no se incluye, así que genera entre 1 y 5
+// }
+
+// // Genera un número aleatorio de dado (entre 1 y 6)
+// int GetRoll()
+// {
+//     return random.Next(1, 7); // 7 no se incluye, así que genera entre 1 y 6
+// }
+
+// // Pregunta al usuario si quiere jugar y devuelve true o false
+// bool ShouldPlay()
+// {
+//     string response = Console.ReadLine().Trim().ToLower();
+
+//     // Validación: mientras la respuesta no sea válida, vuelve a preguntar
+//     while (response != "s" && response != "si" && response != "n" && response != "no")
+//     {
+//         Console.WriteLine("Por favor escribe S/Sí para sí o N/No para no:");
+//         response = Console.ReadLine().Trim().ToLower();
+//     }
+
+//     return response == "s" || response == "si";
+// }
+
+// // Determina si el jugador gana o pierde
+// string WinOrLose(int roll, int target)
+// {
+//     if (roll > target)
+//     {
+//         return "¡Ganaste! 🎉";
+//     }
+//     else
+//     {
+//         return "¡Perdiste! 😢";
+//     }
+// }
+
+//Ejercicio nuevo metodo
 using System;
 
-Random random = new Random();
+// class Program
+// {
+//     static void Main()
+//     {
+//         // Lista de animales
+//         string[] pettingZoo = 
+//         {
+//             "alpacas", "capybaras", "chickens", "ducks", "emus", "geese", 
+//             "goats", "iguanas", "kangaroos", "lemurs", "llamas", "macaws", 
+//             "ostriches", "pigs", "ponies", "rabbits", "sheep", "tortoises",
+//         };
 
-Console.WriteLine("¿Quieres jugar? (S/N)");
-if (ShouldPlay())
+//         // Paso 1: Mezclar animales
+//         RandomizeAnimals(pettingZoo);
+
+//         // Paso 2: Dividir en grupos
+//         string[,] group = AssignGroup(pettingZoo, 6); // 6 grupos para School A
+
+//         // Paso 3: Imprimir nombre de la escuela
+//         Console.WriteLine("School A");
+
+//         // Paso 4: Imprimir los grupos
+//         PrintGroup(group);
+//     }
+
+//     // Método para mezclar los animales
+//     static void RandomizeAnimals(string[] array)
+//     {
+//         Random rng = new Random();
+//         for (int i = array.Length - 1; i > 0; i--)
+//         {
+//             int j = rng.Next(i + 1);
+//             // Intercambiar elementos
+//             string temp = array[i];
+//             array[i] = array[j];
+//             array[j] = temp;
+//         }
+//     }
+
+//     // Método para dividir los animales en grupos
+//     static string[,] AssignGroup(string[] animals, int groupCount)
+//     {
+//         int animalsPerGroup = animals.Length / groupCount;
+//         string[,] result = new string[groupCount, animalsPerGroup];
+
+//         int index = 0;
+//         for (int i = 0; i < groupCount; i++)
+//         {
+//             for (int j = 0; j < animalsPerGroup; j++)
+//             {
+//                 result[i, j] = animals[index++];
+//             }
+//         }
+
+//         return result;
+//     }
+
+//     // Método para imprimir los grupos
+//     static void PrintGroup(string[,] group)
+//     {
+//         for (int i = 0; i < group.GetLength(0); i++)
+//         {
+//             Console.Write($"Group {i + 1}: ");
+//             for (int j = 0; j < group.GetLength(1); j++)
+//             {
+//                 Console.Write(group[i, j]);
+//                 if (j < group.GetLength(1) - 1)
+//                     Console.Write(", ");
+//             }
+//             Console.WriteLine();
+//         }
+//     }
+// }
+
+//Manera simple de hacerlo 
+using System;
+
+string[] pettingZoo = 
 {
-    Console.WriteLine("¡Perfecto! 🎲 Empecemos el juego.");
-    PlayGame();
+    "alpacas", "capybaras", "chickens", "ducks", "emus", "geese", 
+    "goats", "iguanas", "kangaroos", "lemurs", "llamas", "macaws", 
+    "ostriches", "pigs", "ponies", "rabbits", "sheep", "tortoises",
+};
+
+PlanSchoolVisit("School A");
+PlanSchoolVisit("School B", 3);
+PlanSchoolVisit("School C", 2);
+
+void PlanSchoolVisit(string schoolName, int groups = 6) 
+{
+    RandomizeAnimals(); 
+    string[,] group = AssignGroup(groups);
+    Console.WriteLine(schoolName);
+    PrintGroup(group);
 }
-else
-{
-    Console.WriteLine("¡No quieres jugar! Nos vemos en otra ocasión. 👋");
-}
 
-void PlayGame()
+void RandomizeAnimals() 
 {
-    var play = true;
+    Random random = new Random();
 
-    while (play)
+    for (int i = 0; i < pettingZoo.Length; i++) 
     {
-        int target = GetTarget();  // Número aleatorio entre 1 y 5
-        int roll = GetRoll();      // Número aleatorio entre 1 y 6
+        int r = random.Next(i, pettingZoo.Length);
 
-        Console.WriteLine($"\n¡Lanza un número mayor que {target} para ganar!");
-        Console.WriteLine($"Has lanzado un {roll}");
-        Console.WriteLine(WinOrLose(roll, target));
+        string temp = pettingZoo[r];
+        pettingZoo[r] = pettingZoo[i];
+        pettingZoo[i] = temp;
+    }
+}
 
-        Console.WriteLine("\n¿Quieres jugar otra vez? (S/N)");
-        play = ShouldPlay();  // Preguntar si quiere seguir
+string[,] AssignGroup(int groups = 6) 
+{
+    string[,] result = new string[groups, pettingZoo.Length/groups];
+    int start = 0;
+
+    for (int i = 0; i < groups; i++) 
+    {
+        for (int j = 0; j < result.GetLength(1); j++) 
+        {
+            result[i,j] = pettingZoo[start++];
+        }
     }
 
-    // Mensaje final cuando ya no quiere jugar
-    Console.WriteLine("¡No quieres jugar! Nos vemos en otra ocasión. 👋");
+    return result;
 }
 
-// Genera un número objetivo aleatorio entre 1 y 5
-int GetTarget()
+void PrintGroup(string[,] groups) 
 {
-    return random.Next(1, 6); // 6 no se incluye, así que genera entre 1 y 5
-}
-
-// Genera un número aleatorio de dado (entre 1 y 6)
-int GetRoll()
-{
-    return random.Next(1, 7); // 7 no se incluye, así que genera entre 1 y 6
-}
-
-// Pregunta al usuario si quiere jugar y devuelve true o false
-bool ShouldPlay()
-{
-    string response = Console.ReadLine().Trim().ToLower();
-
-    // Validación: mientras la respuesta no sea válida, vuelve a preguntar
-    while (response != "s" && response != "si" && response != "n" && response != "no")
+    for (int i = 0; i < groups.GetLength(0); i++) 
     {
-        Console.WriteLine("Por favor escribe S/Sí para sí o N/No para no:");
-        response = Console.ReadLine().Trim().ToLower();
-    }
-
-    return response == "s" || response == "si";
-}
-
-// Determina si el jugador gana o pierde
-string WinOrLose(int roll, int target)
-{
-    if (roll > target)
-    {
-        return "¡Ganaste! 🎉";
-    }
-    else
-    {
-        return "¡Perdiste! 😢";
+        Console.Write($"Group {i + 1}: ");
+        for (int j = 0; j < groups.GetLength(1); j++) 
+        {
+            Console.Write($"{groups[i,j]}  ");
+        }
+        Console.WriteLine();
     }
 }
