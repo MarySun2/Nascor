@@ -2452,67 +2452,242 @@ using System;
 //     }
 // }
 
-//Manera simple de hacerlo 
-using System;
+// //Manera simple de hacerlo 
+// using System;
 
-string[] pettingZoo = 
+// string[] pettingZoo = 
+// {
+//     "alpacas", "capybaras", "chickens", "ducks", "emus", "geese", 
+//     "goats", "iguanas", "kangaroos", "lemurs", "llamas", "macaws", 
+//     "ostriches", "pigs", "ponies", "rabbits", "sheep", "tortoises",
+// };
+
+// PlanSchoolVisit("School A");
+// PlanSchoolVisit("School B", 3);
+// PlanSchoolVisit("School C", 2);
+
+// void PlanSchoolVisit(string schoolName, int groups = 6) 
+// {
+//     RandomizeAnimals(); 
+//     string[,] group = AssignGroup(groups);
+//     Console.WriteLine(schoolName);
+//     PrintGroup(group);
+// }
+
+// void RandomizeAnimals() 
+// {
+//     Random random = new Random();
+
+//     for (int i = 0; i < pettingZoo.Length; i++) 
+//     {
+//         int r = random.Next(i, pettingZoo.Length);
+
+//         string temp = pettingZoo[r];
+//         pettingZoo[r] = pettingZoo[i];
+//         pettingZoo[i] = temp;
+//     }
+// }
+
+// string[,] AssignGroup(int groups = 6) 
+// {
+//     string[,] result = new string[groups, pettingZoo.Length/groups];
+//     int start = 0;
+
+//     for (int i = 0; i < groups; i++) 
+//     {
+//         for (int j = 0; j < result.GetLength(1); j++) 
+//         {
+//             result[i,j] = pettingZoo[start++];
+//         }
+//     }
+
+//     return result;
+// }
+
+// void PrintGroup(string[,] groups) 
+// {
+//     for (int i = 0; i < groups.GetLength(0); i++) 
+//     {
+//         Console.Write($"Group {i + 1}: ");
+//         for (int j = 0; j < groups.GetLength(1); j++) 
+//         {
+//             Console.Write($"{groups[i,j]}  ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+//Metodos
+// string[] students = {"Jenna", "Ayesha", "Carlos", "Viktor"};
+
+// DisplayStudents(students);
+// DisplayStudents(new string[] {"Robert","Vanya"});
+
+// void DisplayStudents(string[] students)
+// {
+//     foreach (string student in students)
+//     {
+//         Console.Write($"{student}, ");
+//     }
+//     Console.WriteLine();
+// }
+
+//metodo 2
+// double pi = 3.14159;
+
+// PrintCircleInfo(12);
+// PrintCircleInfo(24);
+
+
+// void PrintCircleArea(int radius)
+// {
+//     double area = pi * (radius * radius);
+//     Console.WriteLine($"Area = {area}");
+// }
+
+// void PrintCircleCircumference(int radius)
+// {
+//     double circumference = 2 * pi * radius;
+//     Console.WriteLine($"Circumference = {circumference}");
+// }
+
+// void PrintCircleInfo(int radius) 
+// {
+//     Console.WriteLine($"Circle with radius {radius}");
+//     PrintCircleArea(radius);
+//     PrintCircleCircumference(radius);
+// }
+
+//metodo 3
+// int a = 3;
+// int b = 4;
+// int c = 0;
+
+// Multiply(a, b, c);
+// Console.WriteLine($"global statement: {a} x {b} = {c}");
+
+// void Multiply(int a, int b, int c) 
+// {
+//     c = a * b;
+//     Console.WriteLine($"inside Multiply method: {a} x {b} = {c}");
+// }
+
+//Metodo 4
+// int[] array = {1, 2, 3, 4, 5};
+
+// PrintArray(array);
+// Clear(array);
+// PrintArray(array);
+
+// void PrintArray(int[] array) 
+// {
+//     foreach (int a in array) 
+//     {
+//         Console.Write($"{a} ");
+//     }
+//     Console.WriteLine();
+// }
+
+// void Clear(int[] array) 
+// {
+//     for (int i = 0; i < array.Length; i++) 
+//     {
+//         array[i] = 0;
+//     }
+// }
+
+//Metodo 5
+
+string status = "Healthy";
+
+Console.WriteLine($"Start: {status}");
+SetHealth(false);
+Console.WriteLine($"End: {status}");
+
+void SetHealth(bool isHealthy)
 {
-    "alpacas", "capybaras", "chickens", "ducks", "emus", "geese", 
-    "goats", "iguanas", "kangaroos", "lemurs", "llamas", "macaws", 
-    "ostriches", "pigs", "ponies", "rabbits", "sheep", "tortoises",
-};
-
-PlanSchoolVisit("School A");
-PlanSchoolVisit("School B", 3);
-PlanSchoolVisit("School C", 2);
-
-void PlanSchoolVisit(string schoolName, int groups = 6) 
-{
-    RandomizeAnimals(); 
-    string[,] group = AssignGroup(groups);
-    Console.WriteLine(schoolName);
-    PrintGroup(group);
+    status = (isHealthy ? "Healthy" : "Unhealthy");
+    Console.WriteLine($"Middle: {status}");
 }
 
-void RandomizeAnimals() 
-{
-    Random random = new Random();
+//Metodos opcionales
 
-    for (int i = 0; i < pettingZoo.Length; i++) 
-    {
-        int r = random.Next(i, pettingZoo.Length);
+// string[] guestList = {"Rebecca", "Nadia", "Noor", "Jonte"};
+// string[] rsvps = new string[10];
+// int count = 0;
+// Console.WriteLine("Ejercicio1");
+// RSVP("Tony", inviteOnly: true, allergies: "Jackfruit", partySize: 1);
+// Console.WriteLine("Ejercicio2");
+// RSVP("Rebecca", 1, "none", true);
+// RSVP("Nadia", 2, "Nuts", true);
+// RSVP("Linh", 2, "none", false);
+// RSVP("Tony", 1, "Jackfruit", true);
+// RSVP("Noor", 4, "none", false);
+// RSVP("Jonte", 2, "Stone fruit", false);
+// Console.WriteLine("Ejercicio3");
+// ShowRSVPs();
 
-        string temp = pettingZoo[r];
-        pettingZoo[r] = pettingZoo[i];
-        pettingZoo[i] = temp;
-    }
-}
+// void RSVP(string name, int partySize, string allergies, bool inviteOnly) 
+// {
+//         if (inviteOnly)
+//         {
+//             bool found = false;
+//         foreach (string guest in guestList)
+//         {
+//             if (guest.Equals(name)) {
+//                 found = true;
+//                 break;
+//             }
+//         }
+//         if (!found)
+//         {
+//             Console.WriteLine($"Sorry, {name} is not on the guest list");
+//             return;
+//         }
+//     }
 
-string[,] AssignGroup(int groups = 6) 
-{
-    string[,] result = new string[groups, pettingZoo.Length/groups];
-    int start = 0;
+//     rsvps[count] = $"Name: {name}, \tParty Size: {partySize}, \tAllergies: {allergies}";
+//     count++;
+// }
 
-    for (int i = 0; i < groups; i++) 
-    {
-        for (int j = 0; j < result.GetLength(1); j++) 
-        {
-            result[i,j] = pettingZoo[start++];
-        }
-    }
+// void ShowRSVPs()
+// {
+//     Console.WriteLine("\nTotal RSVPs:");
+//     for (int i = 0; i < count; i++)
+//     {
+//         Console.WriteLine(rsvps[i]);
+//     }
+// }
 
-    return result;
-}
+//Metodo 6
 
-void PrintGroup(string[,] groups) 
-{
-    for (int i = 0; i < groups.GetLength(0); i++) 
-    {
-        Console.Write($"Group {i + 1}: ");
-        for (int j = 0; j < groups.GetLength(1); j++) 
-        {
-            Console.Write($"{groups[i,j]}  ");
-        }
-        Console.WriteLine();
-    }
-}
+string[,] corporate = 
+	{
+		{"Robert", "Bavin"}, {"Simon", "Bright"},
+		{"Kim", "Sinclair"}, {"Aashrita", "Kamath"},
+		{"Sarah", "Delucchi"}, {"Sinan", "Ali"}};
+
+	string[,] external = 
+	{
+		{"Vinnie", "Ashton"}, {"Cody", "Dysart"},
+		{"Shay", "Lawrence"}, {"Daren", "Valdes"}
+	};
+
+	string externalDomain = "hayworth.com";
+
+	for (int i = 0; i < corporate.GetLength(0); i++) 
+	{
+		DisplayEmail(first: corporate[i,0], last: corporate[i,1]);
+	}
+
+	for (int i = 0; i < external.GetLength(0); i++) 
+	{
+		DisplayEmail(first: external[i,0], last: external[i,1], domain: externalDomain);
+	}
+
+	void DisplayEmail(string first, string last, string domain = "contoso.com") 
+	{
+		string email = first.Substring(0, 2) + last;
+		email = email.ToLower();
+		Console.WriteLine($"{email}@{domain}");
+	}
