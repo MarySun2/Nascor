@@ -2598,17 +2598,17 @@ using System;
 
 //Metodo 5
 
-string status = "Healthy";
+// string status = "Healthy";
 
-Console.WriteLine($"Start: {status}");
-SetHealth(false);
-Console.WriteLine($"End: {status}");
+// Console.WriteLine($"Start: {status}");
+// SetHealth(false);
+// Console.WriteLine($"End: {status}");
 
-void SetHealth(bool isHealthy)
-{
-    status = (isHealthy ? "Healthy" : "Unhealthy");
-    Console.WriteLine($"Middle: {status}");
-}
+// void SetHealth(bool isHealthy)
+// {
+//     status = (isHealthy ? "Healthy" : "Unhealthy");
+//     Console.WriteLine($"Middle: {status}");
+// }
 
 //Metodos opcionales
 
@@ -2661,33 +2661,358 @@ void SetHealth(bool isHealthy)
 
 //Metodo 6
 
-string[,] corporate = 
-	{
-		{"Robert", "Bavin"}, {"Simon", "Bright"},
-		{"Kim", "Sinclair"}, {"Aashrita", "Kamath"},
-		{"Sarah", "Delucchi"}, {"Sinan", "Ali"}};
+// string[,] corporate = 
+// 	{
+// 		{"Robert", "Bavin"}, {"Simon", "Bright"},
+// 		{"Kim", "Sinclair"}, {"Aashrita", "Kamath"},
+// 		{"Sarah", "Delucchi"}, {"Sinan", "Ali"}};
 
-	string[,] external = 
-	{
-		{"Vinnie", "Ashton"}, {"Cody", "Dysart"},
-		{"Shay", "Lawrence"}, {"Daren", "Valdes"}
-	};
+// 	string[,] external = 
+// 	{
+// 		{"Vinnie", "Ashton"}, {"Cody", "Dysart"},
+// 		{"Shay", "Lawrence"}, {"Daren", "Valdes"}
+// 	};
 
-	string externalDomain = "hayworth.com";
+// 	string externalDomain = "hayworth.com";
 
-	for (int i = 0; i < corporate.GetLength(0); i++) 
-	{
-		DisplayEmail(first: corporate[i,0], last: corporate[i,1]);
-	}
+// 	for (int i = 0; i < corporate.GetLength(0); i++) 
+// 	{
+// 		DisplayEmail(first: corporate[i,0], last: corporate[i,1]);
+// 	}
 
-	for (int i = 0; i < external.GetLength(0); i++) 
-	{
-		DisplayEmail(first: external[i,0], last: external[i,1], domain: externalDomain);
-	}
+// 	for (int i = 0; i < external.GetLength(0); i++) 
+// 	{
+// 		DisplayEmail(first: external[i,0], last: external[i,1], domain: externalDomain);
+// 	}
 
-	void DisplayEmail(string first, string last, string domain = "contoso.com") 
-	{
-		string email = first.Substring(0, 2) + last;
-		email = email.ToLower();
-		Console.WriteLine($"{email}@{domain}");
-	}
+// 	void DisplayEmail(string first, string last, string domain = "contoso.com") 
+// 	{
+// 		string email = first.Substring(0, 2) + last;
+// 		email = email.ToLower();
+// 		Console.WriteLine($"{email}@{domain}");
+// 	}
+
+//Ejercicio: Incorporar código para finalizar el juego
+
+// using System;
+
+// class Program
+// {
+//     // Guardamos el tamaño actual de la ventana para detectar cambios
+//     static int windowWidth = Console.WindowWidth;
+//     static int windowHeight = Console.WindowHeight;
+
+//     static void Main()
+//     {
+//         Console.WriteLine("Mini juego iniciado. Use flechas para mover.");
+//         Console.WriteLine("Presione una tecla no direccional para salir (si opción activada).");
+
+//         while (true)
+//         {
+//             // Antes de cada movimiento, comprobamos si cambió el tamaño
+//             if (WindowResized())
+//             {
+//                 Console.Clear();
+//                 Console.WriteLine("Console was resized. Program exiting.");
+//                 break;
+//             }
+
+//             // Llamamos al método Move con la opción habilitada para detectar teclas no direccionales
+//             bool exit = Move(detectNonDirectionalKeys: true);
+//             if (exit)
+//             {
+//                 Console.WriteLine("Non-directional key pressed. Program exiting.");
+//                 break;
+//             }
+//         }
+//     }
+
+//     // Método que detecta cambio de tamaño
+//     static bool WindowResized()
+//     {
+//         if (Console.WindowWidth != windowWidth || Console.WindowHeight != windowHeight)
+//         {
+//             return true;
+//         }
+//         return false;
+//     }
+
+//     // Método Move con parámetro opcional para detectar teclas no direccionales
+//     // Retorna true si se debe terminar el juego
+//     static bool Move(bool detectNonDirectionalKeys = false)
+//     {
+//         // Leer la tecla sin mostrarla en consola
+//         ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+
+//         // Detectar si es tecla direccional
+//         switch (keyInfo.Key)
+//         {
+//             case ConsoleKey.UpArrow:
+//             case ConsoleKey.DownArrow:
+//             case ConsoleKey.LeftArrow:
+//             case ConsoleKey.RightArrow:
+//                 Console.WriteLine($"Moved {keyInfo.Key}");
+//                 return false; // Continúa el juego
+
+//             default:
+//                 if (detectNonDirectionalKeys)
+//                 {
+//                     // Cualquier tecla que no sea flecha, termina el juego
+//                     return true;
+//                 }
+//                 else
+//                 {
+//                     // Si no detectamos teclas no direccionales, solo ignoramos la tecla
+//                     Console.WriteLine($"Non-directional key pressed: {keyInfo.Key}, but continuing.");
+//                     return false;
+//                 }
+//         }
+//     }
+// }
+
+//Ejercicio 2
+
+// using System;
+// using System.Threading;
+
+// class Program
+// {
+//     static int playerX = 5;
+//     static int playerY = 5;
+//     static char playerIcon = '@';
+
+//     static int foodX;
+//     static int foodY;
+//     static char foodIcon = '*';
+
+//     static void Main()
+//     {
+//         Console.CursorVisible = false;
+
+//         GenerateNewFood();
+//         DrawPlayer();
+//         DrawFood();
+
+//         while (true)
+//         {
+//             if (Console.KeyAvailable)
+//             {
+//                 ConsoleKeyInfo key = Console.ReadKey(true);
+//                 MovePlayer(key);
+
+//                 if (HasEatenFood(playerX, playerY, foodX, foodY))
+//                 {
+//                     ChangePlayerAppearance();
+//                     GenerateNewFood();
+//                 }
+
+//                 Console.Clear();
+//                 DrawFood();
+//                 DrawPlayer();
+//             }
+
+//             Thread.Sleep(50);
+//         }
+//     }
+
+//     static void MovePlayer(ConsoleKeyInfo key)
+//     {
+//         switch (key.Key)
+//         {
+//             case ConsoleKey.UpArrow:
+//                 if (playerY > 0) playerY--;
+//                 break;
+//             case ConsoleKey.DownArrow:
+//                 if (playerY < Console.WindowHeight - 1) playerY++;
+//                 break;
+//             case ConsoleKey.LeftArrow:
+//                 if (playerX > 0) playerX--;
+//                 break;
+//             case ConsoleKey.RightArrow:
+//                 if (playerX < Console.WindowWidth - 1) playerX++;
+//                 break;
+//         }
+//     }
+
+//     static bool HasEatenFood(int px, int py, int fx, int fy)
+//     {
+//         return px == fx && py == fy;
+//     }
+
+//     static void ChangePlayerAppearance()
+//     {
+//         playerIcon = (playerIcon == '@') ? '#' : '@';
+//     }
+
+//     static void GenerateNewFood()
+//     {
+//         Random rand = new Random();
+//         foodX = rand.Next(0, Console.WindowWidth);
+//         foodY = rand.Next(0, Console.WindowHeight);
+//     }
+
+//     static void DrawPlayer()
+//     {
+//         Console.SetCursorPosition(playerX, playerY);
+//         Console.Write(playerIcon);
+//     }
+
+//     static void DrawFood()
+//     {
+//         Console.SetCursorPosition(foodX, foodY);
+//         Console.Write(foodIcon);
+//     }
+// }
+
+//ejercicio 3
+
+using System;
+using System.Threading;
+
+class Program
+{
+    static int playerX = 5;
+    static int playerY = 5;
+    static string playerIcon = "-";
+
+    static int foodX;
+    static int foodY;
+    static string food = "-";
+
+    static bool immobilized = false;
+    static DateTime immobilizedUntil;
+
+    static void Main()
+    {
+        Console.CursorVisible = false;
+        GenerateNewFood();
+        DrawAll();
+
+        while (true)
+        {
+            if (Console.KeyAvailable)
+            {
+                ConsoleKeyInfo key = Console.ReadKey(true);
+
+                if (!IsDirectionalKey(key.Key))
+                    break;
+
+                if (!IsPlayerImmobilized())
+                {
+                    int speed = IsPlayerHappy() ? 3 : 1;
+                    MovePlayer(key, speed);
+                }
+
+                if (HasEatenFood())
+                {
+                    UpdateAppearance();
+                    GenerateNewFood();
+
+                    if (playerIcon == "(X_X)")
+                        immobilizedUntil = DateTime.Now.AddSeconds(3); // Inmovilizado por 3 segundos
+                }
+
+                Console.Clear();
+                DrawAll();
+            }
+
+            Thread.Sleep(50);
+        }
+
+        Console.Clear();
+        Console.WriteLine("Programa finalizado.");
+    }
+
+    static void MovePlayer(ConsoleKeyInfo key, int speed = 1)
+    {
+        switch (key.Key)
+        {
+            case ConsoleKey.UpArrow:
+                if (playerY > 0) playerY--;
+                break;
+            case ConsoleKey.DownArrow:
+                if (playerY < Console.WindowHeight - 1) playerY++;
+                break;
+            case ConsoleKey.LeftArrow:
+                if (playerX > 0) playerX -= speed;
+                break;
+            case ConsoleKey.RightArrow:
+                if (playerX < Console.WindowWidth - 1) playerX += speed;
+                break;
+        }
+    }
+
+    static void GenerateNewFood()
+    {
+        Random rand = new Random();
+        foodX = rand.Next(0, Console.WindowWidth - 5);
+        foodY = rand.Next(0, Console.WindowHeight);
+        int type = rand.Next(3);
+
+        switch (type)
+        {
+            case 0:
+                food = "#####"; // comida que inmoviliza
+                break;
+            case 1:
+                food = "happy"; // comida que acelera
+                break;
+            default:
+                food = "apple"; // comida normal
+                break;
+        }
+    }
+
+    static bool HasEatenFood()
+    {
+        return playerX >= foodX && playerX < foodX + food.Length && playerY == foodY;
+    }
+
+    static void UpdateAppearance()
+    {
+        if (food == "#####")
+            playerIcon = "(X_X)";
+        else if (food == "happy")
+            playerIcon = "(^-^)";
+        else
+            playerIcon = "-";
+    }
+
+    static bool IsPlayerImmobilized()
+    {
+        if (playerIcon == "(X_X)")
+        {
+            if (DateTime.Now < immobilizedUntil)
+                return true;
+            else
+            {
+                playerIcon = "-"; // ya puede moverse
+                return false;
+            }
+        }
+        return false;
+    }
+
+    static bool IsPlayerHappy()
+    {
+        return playerIcon == "(^-^)";
+    }
+
+    static bool IsDirectionalKey(ConsoleKey key)
+    {
+        return key == ConsoleKey.UpArrow ||
+               key == ConsoleKey.DownArrow ||
+               key == ConsoleKey.LeftArrow ||
+               key == ConsoleKey.RightArrow;
+    }
+
+    static void DrawAll()
+    {
+        Console.SetCursorPosition(foodX, foodY);
+        Console.Write(food);
+
+        Console.SetCursorPosition(playerX, playerY);
+        Console.Write(playerIcon);
+    }
+}
+
